@@ -25,4 +25,6 @@
     <string name="Sourah">السورة</string>
     <string name="ayahNo">الآية</string>
     <string name="sourah">السورة</string>
+    <string name="followHifz">متابعة الحفظ</string>
+    <string name="chooseStudent">اختر طالب</string>
 </resources>
