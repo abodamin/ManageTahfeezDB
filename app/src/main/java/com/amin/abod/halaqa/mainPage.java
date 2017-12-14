@@ -15,7 +15,7 @@ public class mainPage extends AppCompatActivity {
         final Intent toStudent = new Intent(mainPage.this ,students.class);
         final Intent toHalaqat = new Intent(mainPage.this ,halaqat.class);
         Button btnStudent = (Button) findViewById(R.id.btnStudent);
-        Button btnHalaqa = (Button) findViewById(R.id.btnHalqa);
+        Button btnHalaqa = (Button) findViewById(R.id.btnHalaqa);
 
         btnStudent.setOnClickListener(new View.OnClickListener() {
             @Override
