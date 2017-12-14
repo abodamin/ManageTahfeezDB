@@ -15,10 +15,13 @@ public class mainPage extends AppCompatActivity {
         final Intent toStudent = new Intent(mainPage.this ,students.class);
         final Intent toHalaqat = new Intent(mainPage.this ,halaqat.class);
         final Intent toTeacher = new Intent(mainPage.this , teacher.class);
+        final Intent toManagement = new Intent(mainPage.this , management.class);
 
         Button btnStudent = (Button) findViewById(R.id.btnStudent);
         Button btnHalaqa = (Button) findViewById(R.id.btnHalaqa);
         Button btnTeacher = (Button) findViewById(R.id.btnTeacher);
+        Button btnManagement = (Button) findViewById(R.id.btnManagement);
+
         btnStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,7 +43,12 @@ public class mainPage extends AppCompatActivity {
             }
         });
 
-
+        btnManagement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(toManagement);
+            }
+        });
 
     }
 }
