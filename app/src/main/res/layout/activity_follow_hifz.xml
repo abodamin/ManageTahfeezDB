@@ -7,8 +7,24 @@
     tools:context="com.amin.abod.halaqa.followHifz">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/labelSourah"
         android:layout_width="359dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/lastSorah"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerStudentList"
+        app:layout_constraintVertical_bias="0.078" />
+
+    <TextView
+        android:id="@+id/labelChooseStudent"
+        android:layout_width="0dp"
         android:layout_height="26dp"
         android:layout_marginTop="16dp"
         android:text="@string/chooseStudent"
@@ -23,13 +39,44 @@
         app:layout_constraintVertical_bias="0.019" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinnerStudentList"
         android:layout_width="368dp"
         android:layout_height="35dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/labelChooseStudent"
         app:layout_constraintVertical_bias="0.036" />
+
+    <EditText
+        android:id="@+id/insertHifzSourah"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="@string/sourah"
+        android:inputType="text|textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelSourah"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <EditText
+        android:id="@+id/insertHifzAyah"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="@string/ayahNo"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelSourah"
+        app:layout_constraintVertical_bias="0.242" />
 </android.support.constraint.ConstraintLayout>
