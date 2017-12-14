@@ -13,7 +13,7 @@ public class teacher extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher);
         final Intent toAddTeacher = new Intent(teacher.this,addTeacher.class);
-        Button btnAddTeacher = (Button) findViewById(R.id.btnDeleteStudent);
+        Button btnAddTeacher = (Button) findViewById(R.id.btnAddTeacher);
 
 
         btnAddTeacher.setOnClickListener(new View.OnClickListener() {
