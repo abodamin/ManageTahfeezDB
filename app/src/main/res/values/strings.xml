@@ -7,4 +7,15 @@
     <string name="teachers">المعلمين</string>
     <string name="management">ادارة التحفيظ</string>
     <string name="editHalaqa">تعديل حلقة</string>
+    <string name="addTeacher">إضافة معلم</string>
+    <string name="viewTeacher">عرض المعلمين</string>
+    <string name="editTeacher">تعديل معلم</string>
+    <string name="addStudent">اضافة طالب</string>
+    <string name="viewStudent">عرض طالب</string>
+    <string name="followHifz">متابعة الحفظ</string>
+    <string name="updateStudent">تعديل طالب</string>
+    <string name="deleteStudent">حذف طالب</string>
+    <string name="deleteTeacher">حذف معلم</string>
+    <string name="deleteHalaqa">حذف حلقة</string>
+    <string name="updateParentInfo">تعديل بيانات ولي أمر</string>
 </resources>

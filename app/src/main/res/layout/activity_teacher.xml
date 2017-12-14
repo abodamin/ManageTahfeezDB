@@ -20,10 +20,10 @@
 
 
         <Button
-            android:id="@+id/btnAddHalaqa"
+            android:id="@+id/btnDeleteStudent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/addHalaqa"
+            android:text="@string/addTeacher"
             android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="normal|bold"
@@ -35,12 +35,12 @@
             app:layout_constraintVertical_bias="0.037" />
 
         <Button
-            android:id="@+id/btnShowHalaqa"
+            android:id="@+id/btnviewTeacher"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:text="@string/showHalaqa"
+            android:text="@string/viewTeacher"
             android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -48,15 +48,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnAddHalaqa"
-            app:layout_constraintVertical_bias="0.011" />
+            app:layout_constraintTop_toBottomOf="@+id/btnDeleteStudent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
-            android:id="@+id/btnEditHalaqa"
+            android:id="@+id/btnEditTeacher"
             android:layout_width="0dp"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@string/editHalaqa"
+            android:text="@string/editTeacher"
             android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -65,7 +65,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.323" />
+            app:layout_constraintVertical_bias="0.305" />
 
     </android.support.constraint.ConstraintLayout>
 </RelativeLayout>

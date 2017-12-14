@@ -15,8 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".students"></activity>
-        <activity android:name=".halaqat"></activity>
+        <activity android:name=".students" />
+        <activity android:name=".halaqat" />
+        <activity android:name=".teacher" />
+        <activity android:name=".management"></activity>
     </application>
 
 </manifest>

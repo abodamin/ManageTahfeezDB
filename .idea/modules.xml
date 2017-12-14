@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/HALAQA.iml" filepath="$PROJECT_DIR$/HALAQA.iml" />
+      <module fileurl="file://C:\Users\bly373\StudioProjects\ManageTahfeezDB\HALAQA.iml" filepath="C:\Users\bly373\StudioProjects\ManageTahfeezDB\HALAQA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ManageTahfeezDB.iml" filepath="$PROJECT_DIR$/ManageTahfeezDB.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

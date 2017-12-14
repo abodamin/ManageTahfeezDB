@@ -14,9 +14,10 @@ public class mainPage extends AppCompatActivity {
         setContentView(R.layout.activity_main_page);
         final Intent toStudent = new Intent(mainPage.this ,students.class);
         final Intent toHalaqat = new Intent(mainPage.this ,halaqat.class);
+        final Intent toTeacher = new Intent(mainPage.this , teacher.class);
         Button btnStudent = (Button) findViewById(R.id.btnStudent);
         Button btnHalaqa = (Button) findViewById(R.id.btnHalaqa);
-
+        Button btnTeacher = (Button) findViewById(R.id.btnTeacher);
         btnStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,6 +31,15 @@ public class mainPage extends AppCompatActivity {
                 startActivity(toHalaqat);
             }
         });
+
+        btnTeacher.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(toTeacher);
+            }
+        });
+
+
 
     }
 }
