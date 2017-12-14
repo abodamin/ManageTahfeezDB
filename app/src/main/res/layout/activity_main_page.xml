@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main_page"
     android:layout_width="match_parent"
@@ -10,21 +11,55 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.amin.abod.halaqa.mainPage">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/textView" />
-
-    <Button
-        android:text="الطلاب"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="56dp"
-        android:id="@+id/button" />
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:text="الطلاب"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="112dp"
+            tools:layout_editor_absoluteX="8dp"
+            android:id="@+id/btnStudent"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:text="الحلقات"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="48dp"
+            tools:layout_editor_absoluteX="8dp"
+            android:id="@+id/btnHalaqa"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:text="المعلمين"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="176dp"
+            tools:layout_editor_absoluteX="8dp"
+            android:id="@+id/btnTeacher"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:text="ادارة التحفيظ"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="240dp"
+            tools:layout_editor_absoluteX="8dp"
+            android:id="@+id/button4"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="normal|bold" />
+    </android.support.constraint.ConstraintLayout>
 </RelativeLayout>
