@@ -20,7 +20,7 @@
 
 
         <Button
-            android:id="@+id/btnAddTeacher"
+            android:id="@+id/btnDeleteStudent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/deleteStudent"
@@ -48,7 +48,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnAddTeacher"
+            app:layout_constraintTop_toBottomOf="@+id/btnDeleteStudent"
             app:layout_constraintVertical_bias="0.0" />
 
         <Button

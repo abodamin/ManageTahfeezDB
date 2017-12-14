@@ -20,4 +20,5 @@
     <string name="updateParentInfo">تعديل بيانات ولي أمر</string>
     <string name="title_activity_add_teacher">addTeacher</string>
     <string name="teacherName">إسم المعلم</string>
+    <string name="addTeacherAdd">إضافة المعلم</string>
 </resources>
