@@ -20,6 +20,7 @@
         <activity android:name=".teacher" android:label="@string/teachers"/>
         <activity android:name=".management" android:label="@string/management"/>
         <activity android:name=".addTeacher" android:label="@string/addTeacherAdd"/>
+        <activity android:name=".followHifz" android:label="@string/followHifz"/>
     </application>
 
 </manifest>

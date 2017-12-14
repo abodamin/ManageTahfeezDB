@@ -21,4 +21,8 @@
     <string name="title_activity_add_teacher">addTeacher</string>
     <string name="teacherName">إسم المعلم</string>
     <string name="addTeacherAdd">إضافة المعلم</string>
+    <string name="lastSorah">اخر سورة</string>
+    <string name="Sourah">السورة</string>
+    <string name="ayahNo">الآية</string>
+    <string name="sourah">السورة</string>
 </resources>
