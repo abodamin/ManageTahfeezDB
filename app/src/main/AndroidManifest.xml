@@ -19,7 +19,8 @@
         <activity android:name=".halaqat" />
         <activity android:name=".teacher" />
         <activity android:name=".management" />
-        <activity android:name=".addTeacher"></activity>
+        <activity android:name=".addTeacher" />
+        <activity android:name=".followHifz"></activity>
     </application>
 
 </manifest>
