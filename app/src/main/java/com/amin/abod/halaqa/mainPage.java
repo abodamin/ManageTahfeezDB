@@ -24,6 +24,7 @@ public class mainPage extends AppCompatActivity {
             }
         });
 
+
         btnHalaqa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
