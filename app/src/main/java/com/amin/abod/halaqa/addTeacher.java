@@ -10,4 +10,9 @@ public class addTeacher extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_teacher);
     }
+    /* db.execSQL("create table "+DB_Table_Teacher +"(" +  //teacher
+                " TSSN INTEGER" +     //teacher SSN
+                ",Tname TEXT" +     //* F,L
+                ", Mobile TEXT" +
+                ", PRIMARY KEY (TSSN) )");*/
 }
