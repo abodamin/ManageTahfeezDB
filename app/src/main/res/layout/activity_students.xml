@@ -14,52 +14,64 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
 
         <Button
-            android:text="اضافة طالب"
-            android:layout_width="363dp"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteY="39dp"
-            tools:layout_editor_absoluteX="8dp"
             android:id="@+id/btnAddStudent"
-            android:textStyle="normal|bold"
-            android:textSize="24sp"
-            android:textAlignment="center" />
-
-        <Button
-            android:text="عرض طالب"
             android:layout_width="363dp"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteY="116dp"
-            tools:layout_editor_absoluteX="8dp"
+            android:text="اضافة طالب"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="normal|bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnViewStudent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
             android:id="@+id/btnViewStudent"
-            android:textStyle="normal|bold"
-            android:textSize="24sp"
-            android:textAlignment="center" />
-
-        <Button
-            android:text="متابعة الحفظ"
             android:layout_width="363dp"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteY="204dp"
-            tools:layout_editor_absoluteX="8dp"
+            android:text="عرض طالب"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="normal|bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnHifz"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAddStudent" />
+
+        <Button
             android:id="@+id/btnHifz"
-            android:textStyle="normal|bold"
-            android:textSize="24sp"
-            android:textAlignment="center" />
-
-        <Button
-            android:text="تعديل طالب"
             android:layout_width="363dp"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteY="292dp"
-            tools:layout_editor_absoluteX="8dp"
-            android:id="@+id/btnUpdateStudent"
-            android:textStyle="normal|bold"
+            android:text="متابعة الحفظ"
+            android:textAlignment="center"
             android:textSize="24sp"
-            android:textAlignment="center" />
+            android:textStyle="normal|bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnUpdateStudent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnViewStudent" />
+
+        <Button
+            android:id="@+id/btnUpdateStudent"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:text="تعديل طالب"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="normal|bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnHifz" />
 
     </android.support.constraint.ConstraintLayout>
 </RelativeLayout>

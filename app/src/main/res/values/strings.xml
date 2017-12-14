@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">HALAQA</string>
+    <string name="addHalaqa">إضافة حلقة</string>
+    <string name="showHalaqa">عرض الحلقات</string>
+    <string name="students">الطلاب</string>
+    <string name="halaqat">الحلقات</string>
+    <string name="teachers">المعلمين</string>
+    <string name="management">ادارة التحفيظ</string>
+    <string name="editHalaqa">تعديل حلقة</string>
 </resources>
