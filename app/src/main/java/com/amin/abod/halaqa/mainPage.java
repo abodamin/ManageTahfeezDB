@@ -13,12 +13,21 @@ public class mainPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
         final Intent toStudent = new Intent(mainPage.this ,students.class);
+        final Intent toHalaqat = new Intent(mainPage.this ,halaqat.class);
         Button btnStudent = (Button) findViewById(R.id.btnStudent);
+        Button btnHalaqa = (Button) findViewById(R.id.btnHalqa);
 
         btnStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(toStudent);
+            }
+        });
+
+        btnHalaqa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(toHalaqat);
             }
         });
 
