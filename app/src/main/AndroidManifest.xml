@@ -18,7 +18,8 @@
         <activity android:name=".students" />
         <activity android:name=".halaqat" />
         <activity android:name=".teacher" />
-        <activity android:name=".management"></activity>
+        <activity android:name=".management" />
+        <activity android:name=".addTeacher"></activity>
     </application>
 
 </manifest>

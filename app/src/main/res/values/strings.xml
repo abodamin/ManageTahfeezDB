@@ -18,4 +18,5 @@
     <string name="deleteTeacher">حذف معلم</string>
     <string name="deleteHalaqa">حذف حلقة</string>
     <string name="updateParentInfo">تعديل بيانات ولي أمر</string>
+    <string name="title_activity_add_teacher">addTeacher</string>
 </resources>
