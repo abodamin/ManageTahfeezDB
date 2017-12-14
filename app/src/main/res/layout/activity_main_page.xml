@@ -22,42 +22,45 @@
             android:text="الطلاب"
             android:layout_width="363dp"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteY="112dp"
-            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteX="0dp"
             android:id="@+id/btnStudent"
             android:textAlignment="center"
             android:textSize="24sp"
-            android:textStyle="normal|bold" />
+            android:textStyle="normal|bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnTeacher"
+            android:layout_marginBottom="72dp" />
 
         <Button
             android:text="الحلقات"
             android:layout_width="363dp"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteY="48dp"
-            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteX="0dp"
             android:id="@+id/btnHalaqa"
             android:textAlignment="center"
             android:textSize="24sp"
-            android:textStyle="normal|bold" />
+            android:textStyle="normal|bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnStudent"
+            android:layout_marginBottom="72dp" />
 
         <Button
             android:text="المعلمين"
             android:layout_width="363dp"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteY="176dp"
-            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteX="0dp"
             android:id="@+id/btnTeacher"
             android:textAlignment="center"
             android:textSize="24sp"
-            android:textStyle="normal|bold" />
+            android:textStyle="normal|bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnHalaqaManagment"
+            android:layout_marginBottom="72dp" />
 
         <Button
             android:text="ادارة التحفيظ"
             android:layout_width="363dp"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteY="240dp"
-            tools:layout_editor_absoluteX="8dp"
-            android:id="@+id/button4"
+            tools:layout_editor_absoluteY="379dp"
+            tools:layout_editor_absoluteX="0dp"
+            android:id="@+id/btnHalaqaManagment"
             android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="normal|bold" />
