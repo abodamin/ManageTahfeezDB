@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/labelSourah"
         android:layout_width="359dp"
-        android:layout_height="25dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/lastSorah"
         android:textAlignment="center"
@@ -79,4 +79,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labelSourah"
         app:layout_constraintVertical_bias="0.242" />
+
+    <Button
+        android:id="@+id/btnUpdeteHifz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/updateHifz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.669" />
 </android.support.constraint.ConstraintLayout>
