@@ -8,8 +8,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.os.StrictMode;
 
+import static android.webkit.WebSettings.PluginState.ON;
 
 
 public class MyDataBase extends SQLiteOpenHelper{
@@ -86,6 +86,15 @@ public class MyDataBase extends SQLiteOpenHelper{
         return db.rawQuery("select * from "+DB_Table_Parent, null);
     }
 
+    public boolean getParentBySSN(int pSSN){
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] columns = {"Pname"};
+        String[] selectionArgs = {String.valueOf(pSSN)};
+        boolean result = db.query(DB_Table_Parent, columns, "SSN = ?", selectionArgs, null, null, null, null).moveToFirst();
+
+        return result;
+    }
+
     public static int numOfRaws;
     public boolean updateStudentHifz(String newHifz , int Sid){    //update data of last soura
         SQLiteDatabase db = this.getWritableDatabase();
@@ -99,7 +108,7 @@ public class MyDataBase extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("PRAGMA foreign_keys=ON;");
+        db.execSQL("PRAGMA foreign_keys = ON;");
         db.execSQL("create table "+ DB_Table_Student +" ( " +       //Student
                 "  SSN INTEGER " +
                 ", name TEXT " +
