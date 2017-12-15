@@ -102,6 +102,28 @@ public class MyDataBase extends SQLiteOpenHelper{
         return arrayList;
     }
 
+    public ArrayList getAllHalaqa(){
+        ArrayList arrayList = new ArrayList();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor result = db.rawQuery("select * from "+DB_Table_Halaqa, null);
+        result.moveToFirst();
+        //Cursor teacherHalaqa = db.rawQuery("select Tname from "+DB_Table_Teacher+" where TSSN=HTSSN.Halaqa ",null);
+
+        while (result.isAfterLast() == false){
+            String a1 = result.getString(0);
+            String a2 = result.getString(1);
+            String a3 = result.getString(2);
+           // Cursor teacherName = db.rawQuery("select Tname from "+DB_Table_Teacher+" where TSSN=",null);
+          //  String a4 = teacherName.getString(0);
+            //String a3 = teacherHalaqa.getString(0);
+
+            arrayList.add(a1 +" - "+ a2 +" - "+ a3 );
+            result.moveToNext();
+        }
+        return arrayList;
+    }
+
     public boolean getParentBySSN(int pSSN){
         SQLiteDatabase db = this.getReadableDatabase();
         String[] columns = {"Pname"};
