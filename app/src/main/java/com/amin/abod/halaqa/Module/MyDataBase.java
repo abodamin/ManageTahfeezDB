@@ -102,6 +102,24 @@ public class MyDataBase extends SQLiteOpenHelper{
         return arrayList;
     }
 
+    public ArrayList getAllStudents(){
+        ArrayList arrayList = new ArrayList();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor result = db.rawQuery("select * from "+DB_Table_Student, null);
+        result.moveToFirst();
+        while (result.isAfterLast() == false){
+            String a1 = result.getString(1);
+            String a2 = result.getString(0);
+            String a3 = result.getString(3);
+            String a4 = result.getString(2);
+            String a5 = result.getString(4);
+            arrayList.add(a1 +" - "+ a2 +" - "+ a3 +" - "+ a4 +" - "+ a5);
+            result.moveToNext();
+        }
+        return arrayList;
+    }
+
     public boolean getParentBySSN(int pSSN){
         SQLiteDatabase db = this.getReadableDatabase();
         String[] columns = {"Pname"};
@@ -123,8 +141,12 @@ public class MyDataBase extends SQLiteOpenHelper{
     }
 
     @Override
+    public void onConfigure(SQLiteDatabase db){
+        db.setForeignKeyConstraintsEnabled(true);
+    }
+
+    @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("PRAGMA foreign_keys = 'ON';");
 
         db.execSQL("create table "+ DB_Table_Student +" ( " +       //Student
                 "  SSN INTEGER " +
