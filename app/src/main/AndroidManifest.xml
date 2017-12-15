@@ -54,6 +54,12 @@
         <activity
             android:name=".editTeacher"
             android:label="@string/editTeacher" />
+        <activity android:name=".addHalaqa"
+            android:label="@string/addHalaqa"  />
+        <activity android:name=".viewHalaqat"
+            android:label="@string/showHalaqa"  />
+        <activity android:name=".editHalaqat"
+            android:label="@string/editHalaqa" />
     </application>
 
 </manifest>
