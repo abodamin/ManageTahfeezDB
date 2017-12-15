@@ -55,7 +55,7 @@
     <string name="insertTSSNtoUpdate">رقم هوية المعلم المراد تعديله</string>
     <string name="updatedTeacherName">إسم المعلم الجديد إن وجد</string>
     <string name="updatedTeacherMobile">رقم جوال المعلم الجديد إن وجد</string>
-    <string name="halaqaName">اسم الحلقة</string>
+    <string name="halaqaNamee">اسم الحلقة</string>
     <string name="halaqaCategory">تصنيف الحلقة ، ابتدائي او متوسط او ثانوي</string>
     <string name="halaqaTeacherSSN">رقم هوية معلم الحلقة</string>
     <string name="insertStudentSSNToDelete">ادخل رقم هوية الطالب المراد حذفه</string>
@@ -70,4 +70,6 @@
     <string name="updatedParentSSN">رقم هوية ولي الأمر الجديد إن وجد</string>
     <string name="updatedParentName">إسم ولي الأمر الجديد إن وجد</string>
     <string name="updatedParentMobile">رقم جوال ولي الأمر الجديد إن وجد</string>
+    <string name="halaqaName">اسم الحلقة</string>
+    <string name="insertStudentAtHalaqa">تسجيل الطالب في حلقة ..</string>
 </resources>
