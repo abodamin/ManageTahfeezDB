@@ -51,7 +51,7 @@ MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor t
                 if (result1 == -1 || result2 == -1) {
                     Toast.makeText(addNewStudent.this, " Error occure ", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(addNewStudent.this, " Addid succesfuly ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(addNewStudent.this, " Added succesfuly ", Toast.LENGTH_SHORT).show();
                 }
             }
         });

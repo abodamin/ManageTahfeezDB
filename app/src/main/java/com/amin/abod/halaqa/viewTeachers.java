@@ -10,14 +10,14 @@ import com.amin.abod.halaqa.Module.MyDataBase;
 import java.util.ArrayList;
 
 public class viewTeachers extends AppCompatActivity {
-    final ListView listView = (ListView) findViewById(R.id.listViewData);
+    ListView listView;
 
     MyDataBase myDataBase = new MyDataBase(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_teachers);
-
+        listView  = (ListView) findViewById(R.id.listViewData);
         showData();
 
 

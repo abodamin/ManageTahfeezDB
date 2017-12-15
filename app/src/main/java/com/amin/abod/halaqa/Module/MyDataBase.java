@@ -88,15 +88,14 @@ public class MyDataBase extends SQLiteOpenHelper{
 
     public ArrayList getAllTeachers(){
         ArrayList arrayList = new ArrayList();
-
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor result = db.rawQuery("select * from " + DB_Table_Parent, null);
+
+        Cursor result = db.rawQuery("select * from "+DB_Table_Teacher, null);
         result.moveToFirst();
-        String a1 = "",a2="",a3="";
         while (result.isAfterLast() == false){
-            a1 += result.getColumnName(result.getColumnIndex("Tname"));
-            a2 += result.getColumnName(result.getColumnIndex("TSSN"));
-            a3 += result.getColumnName(result.getColumnIndex(" Mobile"));
+            String a1 = result.getString(0);
+            String a2 = result.getString(1);
+            String a3 = result.getString(2);
             arrayList.add(a1 +" - "+ a2 +" - "+ a3 );
             result.moveToNext();
         }
@@ -157,7 +156,7 @@ public class MyDataBase extends SQLiteOpenHelper{
         db.execSQL("create table "+DB_Table_Teacher +"(" +  //teacher
                 " TSSN INTEGER" +     //teacher SSN
                 ",Tname TEXT" +     //* F,L
-                ", Mobile TEXT" +
+                ",Mobile TEXT" +
                 ", PRIMARY KEY (TSSN) )");
 
     }
