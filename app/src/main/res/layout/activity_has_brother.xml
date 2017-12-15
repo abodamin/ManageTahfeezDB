@@ -22,57 +22,61 @@
             android:id="@+id/insertStudentName"
             android:layout_width="270dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="@string/studentName"
             android:inputType="textPersonName"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.055" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <EditText
             android:id="@+id/insertٍStudentSSN"
             android:layout_width="270dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="@string/insertStudentSSN"
             android:inputType="numberDecimal"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.14" />
+            app:layout_constraintVertical_bias="0.124" />
 
         <EditText
             android:id="@+id/insertٍStudentMobile"
             android:layout_width="270dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="@string/StudentSSN"
             android:inputType="phone"
+            android:textAlignment="textEnd"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.256" />
+            app:layout_constraintVertical_bias="0.247" />
 
         <EditText
             android:id="@+id/insertStartHifz"
             android:layout_width="270dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="@string/startHifz"
             android:inputType="text"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.466" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/insertٍParentSSN"
@@ -82,11 +86,12 @@
             android:ems="10"
             android:hint="@string/parentSSN"
             android:inputType="numberDecimal"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.57" />
+            app:layout_constraintVertical_bias="0.613" />
 
         <Button
             android:id="@+id/btnInsertNewStudent"
@@ -94,6 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="@string/insertNewStudent"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
@@ -102,13 +108,13 @@
         <EditText
             android:id="@+id/isertHalaqaName"
             android:layout_width="270dp"
-            android:layout_height="39dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:ems="10"
-            android:hint="@string/halaqaNameForBrother"
+            android:hint="@string/halaqaName"
             android:inputType="textPersonName"
+            android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/insertStartHifz"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/insertStartHifz"
             app:layout_constraintTop_toBottomOf="@+id/insertٍStudentMobile" />
 
