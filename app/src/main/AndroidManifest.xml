@@ -15,12 +15,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".students" android:label="@string/students"/>
-        <activity android:name=".halaqat" android:label="@string/halaqat"/>
-        <activity android:name=".teacher" android:label="@string/teachers"/>
-        <activity android:name=".management" android:label="@string/management"/>
-        <activity android:name=".addTeacher" android:label="@string/addTeacherAdd"/>
-        <activity android:name=".followHifz" android:label="@string/followHifz"/>
+        <activity
+            android:name=".students"
+            android:label="@string/students" />
+        <activity
+            android:name=".halaqat"
+            android:label="@string/halaqat" />
+        <activity
+            android:name=".teacher"
+            android:label="@string/teachers" />
+        <activity
+            android:name=".management"
+            android:label="@string/management" />
+        <activity
+            android:name=".addTeacher"
+            android:label="@string/addTeacherAdd" />
+        <activity
+            android:name=".followHifz"
+            android:label="@string/followHifz" />
+        <activity
+            android:name=".addStudent"
+            android:label="@string/addStudent" />
+        <activity android:name=".updateStudent"
+            android:label="@string/updateStudent"/>
+        <activity android:name=".viewStudents"
+            android:label="@string/viewStudent"/>
     </application>
 
 </manifest>

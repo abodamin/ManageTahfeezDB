@@ -27,4 +27,6 @@
     <string name="sourah">السورة</string>
     <string name="chooseStudent">اختر طالب</string>
     <string name="updateHifz">تحديث الحفظ</string>
+    <string name="haveBrother">لديه أخ</string>
+    <string name="newStudent">طالب جديد</string>
 </resources>
