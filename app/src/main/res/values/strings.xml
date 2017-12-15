@@ -66,4 +66,8 @@
     <string name="deleteTeacherD">حذف المعلم</string>
     <string name="teacherSSN">رقم الهوية</string>
     <string name="teacherMobile">رقم الجوال</string>
+    <string name="pSSNtoUpdate">رقم هوية ولي الأمر المراد تعديله</string>
+    <string name="updatedParentSSN">رقم هوية ولي الأمر الجديد إن وجد</string>
+    <string name="updatedParentName">إسم ولي الأمر الجديد إن وجد</string>
+    <string name="updatedParentMobile">رقم جوال ولي الأمر الجديد إن وجد</string>
 </resources>
