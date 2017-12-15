@@ -29,4 +29,20 @@
     <string name="updateHifz">تحديث الحفظ</string>
     <string name="haveBrother">لديه أخ</string>
     <string name="newStudent">طالب جديد</string>
+    <string name="addTheStudent">اضافة الطالب</string>
+    <string name="parentName">اسم ولي الامر</string>
+    <string name="insertstudentName">اسم الطالب</string>
+    <string name="studentSSN">رقم هوية الطالب</string>
+    <string name="studentSSNNo">رقم جوال الطالب</string>
+    <string name="insertparentSSN">رقم هوية ولي الامر</string>
+    <string name="insertparentMobile">رقم جوال ولي الامر</string>
+    <string name="insertstartHifz">مقدار الحفظ</string>
+    <string name="studentName">اسم الطالب</string>
+    <string name="insertStudentSSN">رقم هوية الطالب</string>
+    <string name="startHifz">مقدار الحفظ</string>
+    <string name="insertParentName">اسم ولي الامر</string>
+    <string name="parentSSN">رقم هوية ولي الامر</string>
+    <string name="StudentSSN">رقم جوال الطالب</string>
+    <string name="parentMobile">رقم جوال ولي الامر</string>
+    <string name="insertNewStudent">اضافة الطالب</string>
 </resources>

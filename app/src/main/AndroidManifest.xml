@@ -36,10 +36,18 @@
         <activity
             android:name=".addStudent"
             android:label="@string/addStudent" />
-        <activity android:name=".updateStudent"
-            android:label="@string/updateStudent"/>
-        <activity android:name=".viewStudents"
-            android:label="@string/viewStudent"/>
+        <activity
+            android:name=".updateStudent"
+            android:label="@string/updateStudent" />
+        <activity
+            android:name=".viewStudents"
+            android:label="@string/viewStudent" />
+        <activity
+            android:name=".addNewStudent"
+            android:label="@string/newStudent"/>
+        <activity
+            android:name=".addStudentHaveBrother"
+            android:label="@string/haveBrother"/>
     </application>
 
 </manifest>
