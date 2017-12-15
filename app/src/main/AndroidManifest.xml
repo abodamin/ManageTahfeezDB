@@ -54,12 +54,23 @@
         <activity
             android:name=".editTeacher"
             android:label="@string/editTeacher" />
-        <activity android:name=".addHalaqa"
-            android:label="@string/addHalaqa"  />
-        <activity android:name=".viewHalaqat"
-            android:label="@string/showHalaqa"  />
-        <activity android:name=".editHalaqat"
+        <activity
+            android:name=".addHalaqa"
+            android:label="@string/addHalaqa" />
+        <activity
+            android:name=".viewHalaqat"
+            android:label="@string/showHalaqa" />
+        <activity
+            android:name=".editHalaqat"
             android:label="@string/editHalaqa" />
+        <activity android:name=".deleteStudent"
+            android:label="@string/deleteStudent" />
+        <activity android:name=".deleteTeacher"
+            android:label="@string/deleteTeacher" />
+        <activity android:name=".deleteHalaqa"
+            android:label="@string/deleteHalaqa" />
+        <activity android:name=".updateParentInfo"
+            android:label="@string/updateParentInfo"/>
     </application>
 
 </manifest>
