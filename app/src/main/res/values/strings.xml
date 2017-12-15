@@ -45,4 +45,10 @@
     <string name="StudentSSN">رقم جوال الطالب</string>
     <string name="parentMobile">رقم جوال ولي الامر</string>
     <string name="insertNewStudent">اضافة الطالب</string>
+    <string name="insertSSNtoUpdate">رقم هوية الطالب المراد تعديله</string>
+    <string name="updatedStudentName">الاسم الجديد إن وجد</string>
+    <string name="updatedStudentMobile">رقم الجوال الجديد إن وجد</string>
+    <string name="updatedStudentHalaqa">الحلقة الجديدة إن وجدت</string>
+    <string name="noteUpdateStudent">يرجى ادخال القيمة التي يراد تعديلها فقط ، ويترك فارغا في حال عدم وجود تعديلات</string>
+    <string name="btnUpdateStudent">تحديث البيانات</string>
 </resources>
