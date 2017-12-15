@@ -9,7 +9,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import static android.webkit.WebSettings.PluginState.ON;
+import java.util.ArrayList;
 
 
 public class MyDataBase extends SQLiteOpenHelper{
@@ -84,6 +84,23 @@ public class MyDataBase extends SQLiteOpenHelper{
     public Cursor getAllStudentsParents(){
         SQLiteDatabase db = this.getReadableDatabase();
         return db.rawQuery("select * from "+DB_Table_Parent, null);
+    }
+
+    public ArrayList getAllTeachers(){
+        ArrayList arrayList = new ArrayList();
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor result = db.rawQuery("select * from " + DB_Table_Parent, null);
+        result.moveToFirst();
+        String a1 = "",a2="",a3="";
+        while (result.isAfterLast() == false){
+            a1 += result.getColumnName(result.getColumnIndex("Tname"));
+            a2 += result.getColumnName(result.getColumnIndex("TSSN"));
+            a3 += result.getColumnName(result.getColumnIndex(" Mobile"));
+            arrayList.add(a1 +" - "+ a2 +" - "+ a3 );
+            result.moveToNext();
+        }
+        return arrayList;
     }
 
     public boolean getParentBySSN(int pSSN){
