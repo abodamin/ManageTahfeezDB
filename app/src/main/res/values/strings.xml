@@ -58,4 +58,10 @@
     <string name="halaqaName">اسم الحلقة</string>
     <string name="halaqaCategory">تصنيف الحلقة ، ابتدائي او متوسط او ثانوي</string>
     <string name="halaqaTeacherSSN">رقم هوية معلم الحلقة</string>
+    <string name="insertStudentSSNToDelete">ادخل رقم هوية الطالب المراد حذفه</string>
+    <string name="btnDeleteStudent">حذف الطالب</string>
+    <string name="insertHalaqaNameToDelete">ادخل إسم الحلقة المراد حذفها</string>
+    <string name="deleteHalaqaD">حذف الحلقة</string>
+    <string name="insertTeacherSSNtoDelete">ادخل رقم هوية المعلم المراد حذفه</string>
+    <string name="deleteTeacherD">حذف المعلم</string>
 </resources>
