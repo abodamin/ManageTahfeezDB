@@ -28,6 +28,7 @@
     <string name="chooseStudent">اختر طالب</string>
     <string name="updateHifz">تحديث الحفظ</string>
     <string name="haveBrother">لديه أخ</string>
+    <string name="haveBrotherLabel">اضافة طالب لديه أخ</string>
     <string name="newStudent">طالب جديد</string>
     <string name="addTheStudent">اضافة الطالب</string>
     <string name="parentName">اسم ولي الامر</string>
@@ -51,4 +52,7 @@
     <string name="updatedStudentHalaqa">الحلقة الجديدة إن وجدت</string>
     <string name="noteUpdateStudent">يرجى ادخال القيمة التي يراد تعديلها فقط ، ويترك فارغا في حال عدم وجود تعديلات</string>
     <string name="btnUpdateStudent">تحديث البيانات</string>
+    <string name="insertTSSNtoUpdate">رقم هوية المعلم المراد تعديله</string>
+    <string name="updatedTeacherName">إسم المعلم الجديد إن وجد</string>
+    <string name="updatedTeacherMobile">رقم جوال المعلم الجديد إن وجد</string>
 </resources>
