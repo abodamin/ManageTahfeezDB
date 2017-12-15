@@ -23,30 +23,27 @@
             android:id="@+id/insertTeacherName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="@string/teacherName"
             android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/btnUpdateParentInfo"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.105" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/insertTeacherSSN"
             android:layout_height="wrap_content"
-            android:layout_marginTop="72dp"
+            android:layout_marginTop="68dp"
             android:ems="10"
-            android:hint="رقم الهوية"
+            android:hint="@string/teacherSSN"
             android:inputType="number"
-            app:layout_constraintBottom_toTopOf="@+id/btnUpdateParentInfo"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.41" />
+            android:layout_width="match_parent" />
 
         <EditText
             android:id="@+id/insertTeacherMobile"
@@ -54,9 +51,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="128dp"
             android:ems="10"
-            android:hint="رقم الجوال"
+            android:hint="@string/teacherMobile"
             android:inputType="phone"
-            app:layout_constraintBottom_toTopOf="@+id/btnUpdateParentInfo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"

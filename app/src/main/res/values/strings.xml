@@ -64,4 +64,6 @@
     <string name="deleteHalaqaD">حذف الحلقة</string>
     <string name="insertTeacherSSNtoDelete">ادخل رقم هوية المعلم المراد حذفه</string>
     <string name="deleteTeacherD">حذف المعلم</string>
+    <string name="teacherSSN">رقم الهوية</string>
+    <string name="teacherMobile">رقم الجوال</string>
 </resources>
