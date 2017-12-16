@@ -29,9 +29,9 @@ public class deleteTeacher extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String tSSN = spinnerTeacherToDelete.getSelectedItem().toString().trim();
-                Integer result = myDataBase.deleteTeacher(tSSN);
+                boolean result = myDataBase.deleteTeacher(tSSN);
 
-                if (result >0 ){
+                if (result){
                     Toast.makeText(deleteTeacher.this, " Deleted ", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(deleteTeacher.this, " Error ", Toast.LENGTH_SHORT).show();
