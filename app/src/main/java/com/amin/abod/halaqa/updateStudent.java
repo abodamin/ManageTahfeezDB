@@ -61,7 +61,7 @@ public class updateStudent extends AppCompatActivity {
                     if (TextUtils.isEmpty(sName)) {
                         studentName.setError("لايمكن لهذه الخانة ان تكون فارغة");
                         return;
-                    } else {
+                    }else {
                         boolean r = myDataBase.updateStudentInfo(sName, SSN, 1);
                         if (r) {
                             Toast.makeText(updateStudent.this, " تم تعديل الاسم بنجاح ", Toast.LENGTH_SHORT).show();
@@ -76,26 +76,33 @@ public class updateStudent extends AppCompatActivity {
                     if (TextUtils.isEmpty(sMobile)) {
                         studentMobile.setError("لايمكن لهذه الخانة ان تكون فارغة");
                         return;
-                    } else {
-                    boolean r = myDataBase.updateStudentInfo(sMobile, SSN, 2);
+                    }else {
+                        boolean r = myDataBase.updateStudentInfo(sMobile, SSN, 1);
 
                     if (r) {
                         Toast.makeText(updateStudent.this, " تم تعديل رقم الجوال بنجاح ", Toast.LENGTH_SHORT).show();
                         refreshing ();
                     } else {
                         Toast.makeText(updateStudent.this, " يوجد خطأ ", Toast.LENGTH_SHORT).show();
-                    }   }
+                    }
+                    }
                 } else if (studentHalaqa.getVisibility() == View.VISIBLE) {
-                    String sNewHalaqa = studentHalaqa.getSelectedItem().toString().trim();
+                    String sNewHalaqa="";
+                    if(studentHalaqa.getSelectedItem().toString()!=null){
+                        sNewHalaqa = studentHalaqa.getSelectedItem().toString();
+                    }
                     int SSN = Integer.parseInt(studentsSpinner.getSelectedItem().toString());
-
-                    boolean r = myDataBase.updateStudentInfo(sNewHalaqa, SSN, 3);
-
-                    if (r) {
-                        Toast.makeText(updateStudent.this, "تم نقل الطالب الى الحلقة الجديد بنجاح ", Toast.LENGTH_SHORT).show();
-                        refreshing ();
+                    if (sNewHalaqa.isEmpty()) {
+                        return;
                     } else {
-                        Toast.makeText(updateStudent.this, " يوجد خطأ ", Toast.LENGTH_SHORT).show();
+                        boolean r = myDataBase.updateStudentInfo(sNewHalaqa, SSN, 3);
+
+                        if (r) {
+                            Toast.makeText(updateStudent.this, "تم نقل الطالب الى الحلقة الجديد بنجاح ", Toast.LENGTH_SHORT).show();
+                            refreshing();
+                        } else {
+                            Toast.makeText(updateStudent.this, " يوجد خطأ ", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }
 
