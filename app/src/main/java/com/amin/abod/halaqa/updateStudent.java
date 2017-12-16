@@ -26,8 +26,8 @@ public class updateStudent extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         btnUpdateStudentInfo = (Button) findViewById(R.id.btnUpdateStudentInfo);
-
         setContentView(R.layout.activity_update_student);
+
         nameRadioButton = (RadioButton) findViewById(R.id.radioEditName);
         studentName = (EditText) findViewById(R.id.insertUpdatedStudentName);
         studentName.setVisibility(View.GONE);

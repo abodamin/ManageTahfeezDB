@@ -73,4 +73,10 @@
     <string name="chooseTeacherOfHalaqa">اختر معلم الحلقة</string>
     <string name="chooseTeacherToDelete">اختر المعلم لحذفه</string>
     <string name="mainPageLabel">إدارة حلقات التحفيظ</string>
+    <string name="UpdateParentSSN">تعديل رقم الهوية لولي الأمر</string>
+    <string name="UpdateParentName">تعديل اسم ولي الأمر</string>
+    <string name="UpdateParentMobile">تعديل رقم جوال ولي الأمر</string>
+    <string name="EnterNewParentName">ادخل اسم ولي الامر الجديد</string>
+    <string name="enterNewParentMobile">ادخل رقم الجوال الجديد لولي الأمر</string>
+    <string name="enterNewParentSSN">ادخل رقم الهوية الجديد لولي الأمر</string>
 </resources>

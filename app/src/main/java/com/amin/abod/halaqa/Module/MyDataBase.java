@@ -226,6 +226,23 @@ public class MyDataBase extends SQLiteOpenHelper{
         }
     }
 
+    public boolean updateParentInfoFun(String updatedColumn, int pSSN, int x){    //update data of last soura
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        switch(x){
+            case 1 : contentValues.put("SSN",updatedColumn);
+                numOfRaws = db.update(DB_Table_Parent,contentValues,"SSN = ?",new String[] {String.valueOf(pSSN)}); break;
+            case 2 : contentValues.put("Pname",updatedColumn);
+                numOfRaws = db.update(DB_Table_Parent,contentValues,"SSN = ?",new String[] {String.valueOf(pSSN)}); break;
+            case 3 : contentValues.put("Mobile",updatedColumn);
+                numOfRaws = db.update(DB_Table_Parent,contentValues,"SSN = ?",new String[] {String.valueOf(pSSN)}); break;
+        }
+        if(numOfRaws <= 0) return false;
+        else{
+            return true;
+        }
+    }
+
     @Override
     public void onConfigure(SQLiteDatabase db){
         db.setForeignKeyConstraintsEnabled(true);
