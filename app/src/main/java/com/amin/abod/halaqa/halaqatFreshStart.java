@@ -14,16 +14,18 @@ import com.amin.abod.halaqa.Module.MyDataBase;
 
 import java.util.List;
 
-public class addHalaqa extends AppCompatActivity {
+public class halaqatFreshStart extends AppCompatActivity {
     MyDataBase myDataBase = new MyDataBase(this);
     Spinner spinnerTeacher;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_halaqa);
+        setContentView(R.layout.activity_halaqat_fresh_start);
 
         final EditText halaqaName = (EditText) findViewById(R.id.insertHalaqaName);
         final EditText halaqaCategory = (EditText) findViewById(R.id.insertHalaqaCategory);
+
+        final Intent toMainApp = new Intent(halaqatFreshStart.this ,mainPage.class);
 
         spinnerTeacher = (Spinner) findViewById(R.id.spinnerChooseTeacher);
         loadSpinnerData();
@@ -40,10 +42,10 @@ public class addHalaqa extends AppCompatActivity {
                 long result = myDataBase.setHalaqaData(hName, hCategory, hTeacherSSN);
 
                 if(result==-1){
-                    Toast.makeText(addHalaqa.this, " خطأ في الادخال ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(halaqatFreshStart.this, " خطأ في الادخال ", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(addHalaqa.this, " تمت اضافة الحلقة بنجاح ", Toast.LENGTH_SHORT).show();
-                    refreshing();
+                    Toast.makeText(halaqatFreshStart.this, " تمت اضافة الحلقة بنجاح ", Toast.LENGTH_SHORT).show();
+                    startActivity(toMainApp);
                 }
             }
         });

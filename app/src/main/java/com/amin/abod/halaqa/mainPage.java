@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class mainPage extends AppCompatActivity {
 
@@ -22,9 +21,7 @@ public class mainPage extends AppCompatActivity {
             editor.putBoolean("first", false);
             //For commit the changes, Use either editor.commit(); or  editor.apply();.
             editor.commit();
-            Intent halaqa = new Intent(mainPage.this, addHalaqa.class);
-            Intent teacher = new Intent(mainPage.this, addTeacher.class);
-            startActivity(halaqa);
+            Intent teacher = new Intent(mainPage.this, addTeacherFreshStart.class);
             startActivity(teacher);
         }
         setContentView(R.layout.activity_main_page);

@@ -11,6 +11,7 @@
         <activity android:name=".mainPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -62,14 +63,20 @@
         <activity
             android:name=".editHalaqat"
             android:label="@string/editHalaqa" />
-        <activity android:name=".deleteStudent"
+        <activity
+            android:name=".deleteStudent"
             android:label="@string/deleteStudent" />
-        <activity android:name=".deleteTeacher"
+        <activity
+            android:name=".deleteTeacher"
             android:label="@string/deleteTeacher" />
-        <activity android:name=".deleteHalaqa"
+        <activity
+            android:name=".deleteHalaqa"
             android:label="@string/deleteHalaqa" />
-        <activity android:name=".updateParentInfo"
-            android:label="@string/updateParentInfo"/>
+        <activity
+            android:name=".updateParentInfo"
+            android:label="@string/updateParentInfo" />
+        <activity android:name=".addTeacherFreshStart" />
+        <activity android:name=".halaqatFreshStart"></activity>
     </application>
 
 </manifest>
