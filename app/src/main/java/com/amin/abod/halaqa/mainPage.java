@@ -21,26 +21,11 @@ public class mainPage extends AppCompatActivity {
         if(firstTime) {
             editor.putBoolean("first", false);
             //For commit the changes, Use either editor.commit(); or  editor.apply();.
-            editor.commit();  /*or  */
-            /*editor.apply();*/
-            for (int i = 0; i <= 2; i++) {
-                switch (i) {
-                    case 0:
-                        Intent intent = new Intent(mainPage.this, mainPage.class);
-                        startActivity(intent);
-                        Toast.makeText(mainPage.this, " يرجى إضافة معلم حلقة واحد على الأقل ", Toast.LENGTH_LONG).show();
-                        break;
-                    case 1:
-                        Intent halaqa = new Intent(mainPage.this, addHalaqa.class);
-                        startActivity(halaqa);
-                        Toast.makeText(mainPage.this, " يرجى إضافة حلقة واحده على الأقل ", Toast.LENGTH_LONG).show();
-                        break;
-                    case 2:
-                        Intent teacher = new Intent(mainPage.this, addTeacher.class);
-                        startActivity(teacher);
-                        break;
-                }
-            }
+            editor.commit();
+            Intent halaqa = new Intent(mainPage.this, addHalaqa.class);
+            Intent teacher = new Intent(mainPage.this, addTeacher.class);
+            startActivity(halaqa);
+            startActivity(teacher);
         }
         setContentView(R.layout.activity_main_page);
         final Intent toStudent = new Intent(mainPage.this ,students.class);
