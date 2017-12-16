@@ -18,118 +18,104 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/insertStudentName"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="416dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/studentName"
+            android:inputType="textPersonName"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
+        <EditText
+            android:id="@+id/insertٍStudentSSN"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/insertStudentSSN"
+            android:inputType="numberDecimal"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insertStudentName"
+            app:layout_constraintVertical_bias="0.0" />
 
-                <EditText
-                    android:id="@+id/insertStudentName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
-                    android:hint="@string/studentName"
-                    android:inputType="textPersonName"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/insertٍStudentMobile"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/StudentSSN"
+            android:inputType="phone"
+            android:textAlignment="textEnd"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insertٍStudentSSN" />
 
-                <EditText
-                    android:id="@+id/insertٍStudentSSN"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
-                    android:hint="@string/insertStudentSSN"
-                    android:inputType="numberDecimal"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/insertStudentName"
-                    app:layout_constraintVertical_bias="0.0" />
+        <EditText
+            android:id="@+id/insertStartHifz"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/startHifz"
+            android:inputType="text"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerHalaqatList"
+            app:layout_constraintVertical_bias="0.0" />
 
-                <EditText
-                    android:id="@+id/insertٍStudentMobile"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
-                    android:hint="@string/StudentSSN"
-                    android:inputType="phone"
-                    android:textAlignment="textEnd"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/insertٍStudentSSN"
-                    app:layout_constraintVertical_bias="0.0" />
+        <EditText
+            android:id="@+id/insertٍParentSSN"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/parentSSN"
+            android:inputType="numberDecimal"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insertStartHifz"
+            app:layout_constraintVertical_bias="0.0" />
 
-                <Spinner
-                    android:id="@+id/spinnerHalaqatList"
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/insertٍStudentMobile"
-                    app:layout_constraintVertical_bias="0.0" />
+        <Button
+            android:id="@+id/btnInsertNewStudent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/insertNewStudent"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
-                <EditText
-                    android:id="@+id/insertStartHifz"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
-                    android:hint="@string/startHifz"
-                    android:inputType="text"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/spinnerHalaqatList"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <EditText
-                    android:id="@+id/insertٍParentSSN"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
-                    android:hint="@string/parentSSN"
-                    android:inputType="numberDecimal"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/insertParentName"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <Button
-                    android:id="@+id/btnInsertNewStudent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:text="@string/insertNewStudent"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.501"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/insertٍParentMobile"
-                    app:layout_constraintVertical_bias="1.0" />
-            </LinearLayout>
-        </ScrollView>
+        <Spinner
+            android:id="@+id/spinnerHalaqatList"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insertٍStudentMobile" />
 
     </android.support.constraint.ConstraintLayout>
-</RelativeLayout>
+    </RelativeLayout>
