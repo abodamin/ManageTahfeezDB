@@ -23,6 +23,7 @@ public class viewHalaqat extends AppCompatActivity {
         listViewHalaqa = (ListView) findViewById(R.id.listViewHalaqa);
 
         showDataHalaqa();
+
     }
 
 
