@@ -36,7 +36,7 @@ public class followHifz extends AppCompatActivity {
                 String soura = hifzSoura.getText().toString().trim();
                 int Aya = Integer.parseInt(hifzAya.getText().toString().trim());
                 int sID = Integer.parseInt(studentSpinner.getSelectedItem().toString());
-                soura += String.valueOf(" : "+Aya);
+                soura += String.valueOf("("+Aya+")");
                 boolean r = myDataBase.updateStudentHifz(soura , sID);
 
                 if(r){
