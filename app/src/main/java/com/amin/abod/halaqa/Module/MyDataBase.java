@@ -202,7 +202,8 @@ public class MyDataBase extends SQLiteOpenHelper{
 
         contentValues.put("Hifz",newHifz);
         numOfRaws = db.update(DB_Table_Student,contentValues,"SSN = ?",new String[] {String.valueOf(Sid)});  //id here should be as String because of the data table
-
+        if(numOfRaws <= 0) return false;
+        else
         return true;
     }
 
