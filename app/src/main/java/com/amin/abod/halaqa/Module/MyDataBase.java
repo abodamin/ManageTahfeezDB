@@ -143,14 +143,31 @@ public class MyDataBase extends SQLiteOpenHelper{
         return arrayList;
     }
 
-    public List<String> getAllLabels(){
+    public List<String> getAllLabels(int x){
         List<String> labels = new ArrayList<String>();
-
-        // Select All Query
-        String selectQuery = "SELECT name FROM " + DB_Table_Student;
-
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery(selectQuery, null);
+        String selectQuery="";
+        Cursor cursor;
+        // Select All Query
+        switch(x) {
+            case 1:
+                selectQuery = "SELECT name FROM " + DB_Table_Student;
+                break;
+            case 2:
+                selectQuery = "SELECT SSN FROM " + DB_Table_Parent;
+                break;
+            case 3:
+                selectQuery = "SELECT TSSN FROM " + DB_Table_Teacher;
+                break;
+            case 4:
+                selectQuery = "SELECT Hname FROM " + DB_Table_Halaqa;
+                break;
+        }
+
+
+        cursor = db.rawQuery(selectQuery, null);
+
+
 
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {

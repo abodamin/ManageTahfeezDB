@@ -3,19 +3,29 @@ package com.amin.abod.halaqa;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.amin.abod.halaqa.Module.MyDataBase;
 
+import java.util.List;
+
 public class addNewStudent extends AppCompatActivity {
 MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor takes Context
 
+    Spinner halaqaSpinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_student);
+
+        // Spinner element
+        halaqaSpinner = (Spinner) findViewById(R.id.spinnerHalaqatList);
+
+        loadSpinnerData();
 
         final EditText studentName = (EditText) findViewById(R.id.insertStudentName);
         final EditText studentSSN = (EditText) findViewById(R.id.insertٍStudentSSN);
@@ -58,5 +68,24 @@ MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor t
 
 
 
+    }
+
+    private void loadSpinnerData() {
+        // database handler
+        MyDataBase db = new MyDataBase(getApplicationContext());
+
+        // Spinner Drop down elements
+        List<String> lables = db.getAllLabels(4);
+
+        // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, lables);
+
+        // Drop down layout style - list view with radio button
+        dataAdapter
+                .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // attaching data adapter to spinner
+        halaqaSpinner.setAdapter(dataAdapter);
     }
 }

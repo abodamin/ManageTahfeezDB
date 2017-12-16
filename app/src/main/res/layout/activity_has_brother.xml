@@ -105,18 +105,17 @@
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <EditText
-            android:id="@+id/insertHalaqaName"
-            android:layout_width="270dp"
-            android:layout_height="wrap_content"
+        <Spinner
+            android:id="@+id/spinnerHalaqatList"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
             android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="@string/halaqaName"
-            android:inputType="textPersonName"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/insertStartHifz"
-            app:layout_constraintStart_toEndOf="@+id/insertStartHifz"
-            app:layout_constraintTop_toBottomOf="@+id/insertٍStudentMobile" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insertٍStudentMobile"
+            app:layout_constraintVertical_bias="0.019" />
 
     </android.support.constraint.ConstraintLayout>
     </RelativeLayout>

@@ -27,7 +27,7 @@ public class followHifz extends AppCompatActivity {
         MyDataBase db = new MyDataBase(getApplicationContext());
 
         // Spinner Drop down elements
-        List<String> lables = db.getAllLabels();
+        List<String> lables = db.getAllLabels(1);
 
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
