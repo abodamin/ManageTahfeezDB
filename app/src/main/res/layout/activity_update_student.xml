@@ -18,22 +18,16 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true">
 
-        <EditText
-            android:id="@+id/insertStudentSSNtoUpdate"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="@string/insertSSNtoUpdate"
-            android:inputType="number"
-            android:textSize="24sp"
+
+        <Spinner
+            android:id="@+id/spinnerStudentList"
+            android:layout_width="368dp"
+            android:layout_height="35dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
+            app:layout_constraintVertical_bias="0.036" />
 
         <EditText
             android:id="@+id/insertUpdatedStudentName"
@@ -49,7 +43,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.143" />
+            app:layout_constraintVertical_bias="0.356" />
 
         <EditText
             android:id="@+id/insertUpdatedStudentMobile"
@@ -65,7 +59,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.284" />
+            app:layout_constraintVertical_bias="0.49" />
 
         <EditText
             android:id="@+id/insertUpdatedStudentHalaqa"
@@ -81,36 +75,60 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.422" />
+            app:layout_constraintVertical_bias="0.638" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="0dp"
+        <Button
+            android:id="@+id/btnUpdateStudent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/noteUpdateStudent"
-            android:textColor="@android:color/holo_red_dark"
+            android:text="@string/btnUpdateStudent"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RadioGroup
+            android:layout_width="128dp"
+            android:layout_height="78dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.928"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.593" />
+            app:layout_constraintVertical_bias="0.159">
 
-    <Button
-        android:id="@+id/btnUpdateStudent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnUpdateStudent"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+            <RadioButton
+                android:id="@+id/radioEditName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:layoutDirection="rtl"
+                android:text="تعديل الاسم" />
+
+            <RadioButton
+                android:id="@+id/radioEditMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:layoutDirection="rtl"
+                android:text="تعديل رقم الجوال"
+                android:textAlignment="textStart" />
+
+            <RadioButton
+                android:id="@+id/radioEditHalaqa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:layoutDirection="rtl"
+                android:text="تعديل الحلقة"
+                android:textAlignment="textStart" />
+
+        </RadioGroup>
 
     </android.support.constraint.ConstraintLayout>
 </RelativeLayout>

@@ -66,8 +66,6 @@ MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor t
             }
         });
 
-
-
     }
 
     private void loadSpinnerData() {

@@ -161,6 +161,9 @@ public class MyDataBase extends SQLiteOpenHelper{
             case 4:
                 selectQuery = "SELECT Hname FROM " + DB_Table_Halaqa;
                 break;
+            case 5:
+                selectQuery = "SELECT SSN FROM " + DB_Table_Student;
+                break;
         }
 
 
