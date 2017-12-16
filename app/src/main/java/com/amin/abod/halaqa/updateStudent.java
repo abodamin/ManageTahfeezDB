@@ -3,6 +3,7 @@ package com.amin.abod.halaqa;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -19,9 +20,10 @@ public class updateStudent extends AppCompatActivity {
     MyDataBase myDataBase = new MyDataBase(this);
     Spinner studentsSpinner;
     Button btnUpdateStudentInfo;
-    RadioButton nameRadioButton,mobileRadioButton,halaqaRadioButton;
-    EditText studentName,studentMobile;
+    RadioButton nameRadioButton, mobileRadioButton, halaqaRadioButton;
+    EditText studentName, studentMobile;
     Spinner studentHalaqa;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,50 +54,57 @@ public class updateStudent extends AppCompatActivity {
         btnUpdateStudentInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(studentName.getVisibility() == View.VISIBLE) {
+                if (studentName.getVisibility() == View.VISIBLE) {
 
                     String sName = studentName.getText().toString().trim();
                     int SSN = Integer.parseInt(studentsSpinner.getSelectedItem().toString());
-
-                    boolean r = myDataBase.updateStudentInfo(sName, SSN,1);
-
-                    if (r) {
-                        Toast.makeText(updateStudent.this, " تم تعديل الاسم بنجاح ", Toast.LENGTH_SHORT).show();
+                    if (TextUtils.isEmpty(sName)) {
+                        studentName.setError("لايمكن لهذه الخانة ان تكون فارغة");
+                        return;
                     } else {
-                        Toast.makeText(updateStudent.this, " يوجد خطأ ", Toast.LENGTH_SHORT).show();
+                        boolean r = myDataBase.updateStudentInfo(sName, SSN, 1);
+                        if (r) {
+                            Toast.makeText(updateStudent.this, " تم تعديل الاسم بنجاح ", Toast.LENGTH_SHORT).show();
+                            refreshing ();
+                        } else {
+                            Toast.makeText(updateStudent.this, " يوجد خطأ ", Toast.LENGTH_SHORT).show();
+                        }
                     }
-                }else if(studentMobile.getVisibility() == View.VISIBLE){
+                } else if (studentMobile.getVisibility() == View.VISIBLE) {
                     String sMobile = studentMobile.getText().toString().trim();
                     int SSN = Integer.parseInt(studentsSpinner.getSelectedItem().toString());
-
-                    boolean r = myDataBase.updateStudentInfo(sMobile, SSN,2);
+                    if (TextUtils.isEmpty(sMobile)) {
+                        studentMobile.setError("لايمكن لهذه الخانة ان تكون فارغة");
+                        return;
+                    } else {
+                    boolean r = myDataBase.updateStudentInfo(sMobile, SSN, 2);
 
                     if (r) {
                         Toast.makeText(updateStudent.this, " تم تعديل رقم الجوال بنجاح ", Toast.LENGTH_SHORT).show();
+                        refreshing ();
                     } else {
                         Toast.makeText(updateStudent.this, " يوجد خطأ ", Toast.LENGTH_SHORT).show();
-                    }
-                }else if(studentHalaqa.getVisibility() == View.VISIBLE){
+                    }   }
+                } else if (studentHalaqa.getVisibility() == View.VISIBLE) {
                     String sNewHalaqa = studentHalaqa.getSelectedItem().toString().trim();
                     int SSN = Integer.parseInt(studentsSpinner.getSelectedItem().toString());
 
-                    boolean r = myDataBase.updateStudentInfo(sNewHalaqa, SSN,3);
+                    boolean r = myDataBase.updateStudentInfo(sNewHalaqa, SSN, 3);
 
                     if (r) {
                         Toast.makeText(updateStudent.this, "تم نقل الطالب الى الحلقة الجديد بنجاح ", Toast.LENGTH_SHORT).show();
+                        refreshing ();
                     } else {
                         Toast.makeText(updateStudent.this, " يوجد خطأ ", Toast.LENGTH_SHORT).show();
                     }
                 }
 
-                Intent intent = getIntent();
-                finish();
-                startActivity(intent);
             }
         });
 
 
     }
+
     public void onNameRadioButtonClick() {
         nameRadioButton.setOnClickListener(new View.OnClickListener() {
 
@@ -133,11 +142,11 @@ public class updateStudent extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                if (studentHalaqa.getVisibility()== View.GONE){
+                if (studentHalaqa.getVisibility() == View.GONE) {
                     studentHalaqa.setVisibility(View.VISIBLE);
                     studentName.setVisibility(View.GONE);
                     studentMobile.setVisibility(View.GONE);
-                }else{
+                } else {
                     studentHalaqa.setVisibility(View.GONE);
                 }
             }
@@ -180,5 +189,11 @@ public class updateStudent extends AppCompatActivity {
 
         // attaching data adapter to spinner
         studentHalaqa.setAdapter(dataAdapter);
+    }
+
+    public void refreshing (){
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 }

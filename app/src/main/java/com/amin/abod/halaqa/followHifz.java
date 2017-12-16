@@ -41,9 +41,7 @@ public class followHifz extends AppCompatActivity {
 
                 if(r){
                     Toast.makeText(followHifz.this, " تم تحديث حفظ الطالب ", Toast.LENGTH_SHORT).show();
-                    Intent intent = getIntent();
-                    finish();
-                    startActivity(intent);
+                    refreshing();
                 }else {
                     Toast.makeText(followHifz.this, " خطأ ", Toast.LENGTH_SHORT).show();
                 }
@@ -69,4 +67,10 @@ public class followHifz extends AppCompatActivity {
         // attaching data adapter to spinner
         studentSpinner.setAdapter(dataAdapter);
     }
+    public void refreshing (){
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
+    }
+
 }

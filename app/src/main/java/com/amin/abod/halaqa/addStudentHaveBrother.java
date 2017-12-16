@@ -55,10 +55,7 @@ MyDataBase myDataBase = new MyDataBase(this);
                        Toast.makeText(addStudentHaveBrother.this, "خطأ في الادخال", Toast.LENGTH_SHORT).show();
                    } else {
                        Toast.makeText(addStudentHaveBrother.this, " تمت اضافة الطالب بنجاح ", Toast.LENGTH_SHORT).show();
-
-                       Intent intent = getIntent();
-                       finish();
-                       startActivity(intent);
+                    refreshing();
                    }
             }
         });
@@ -83,5 +80,11 @@ MyDataBase myDataBase = new MyDataBase(this);
 
         // attaching data adapter to spinner
         halaqaSpinner.setAdapter(dataAdapter);
+    }
+
+    public void refreshing (){
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 }

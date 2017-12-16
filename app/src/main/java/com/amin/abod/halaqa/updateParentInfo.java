@@ -3,6 +3,7 @@ package com.amin.abod.halaqa;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -29,7 +30,7 @@ public class updateParentInfo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_parent_info);
-       btnchangeParentInfo = (Button) findViewById(R.id.btnchangeParentInfo);
+        btnchangeParentInfo = (Button) findViewById(R.id.btnchangeParentInfo);
         //update SSN of Parent
 
         radioEditParentSSN = (RadioButton) findViewById(R.id.radioEditParentSSN);
@@ -66,6 +67,7 @@ public class updateParentInfo extends AppCompatActivity {
 
                     if (r) {
                         Toast.makeText(updateParentInfo.this, " تم تعديل رقم  الهوية بنجاح ", Toast.LENGTH_SHORT).show();
+                        refreshing();
                     } else {
                         Toast.makeText(updateParentInfo.this, " يوجد خطأ ", Toast.LENGTH_SHORT).show();
                     }
@@ -73,14 +75,19 @@ public class updateParentInfo extends AppCompatActivity {
 
                     String pName = updateParentName.getText().toString().trim();
                     int pSSN = Integer.parseInt(parentUpdateSpinner.getSelectedItem().toString());
+                        if(TextUtils.isEmpty(pName)){
+                            updateParentName.setError("لايمكن لهذه الخانة ان تكون فارغة");
+                            return;
+                        }else{
+                            boolean r = myDataBase.updateParentInfoFun(pName, pSSN,2);
+                            if (r) {
+                                Toast.makeText(updateParentInfo.this, " تم تعديل الاسم بنجاح ", Toast.LENGTH_SHORT).show();
+                                refreshing();
+                            } else {
+                                Toast.makeText(updateParentInfo.this, " يوجد خطأ ", Toast.LENGTH_SHORT).show();
+                            }
+                        }
 
-                    boolean r = myDataBase.updateParentInfoFun(pName, pSSN,2);
-
-                    if (r) {
-                        Toast.makeText(updateParentInfo.this, " تم تعديل الاسم بنجاح ", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(updateParentInfo.this, " يوجد خطأ ", Toast.LENGTH_SHORT).show();
-                    }
                 }else if(updateParentMobile.getVisibility() == View.VISIBLE){
                     String pMobile = updateParentMobile.getText().toString().trim();
                     int pSSN = Integer.parseInt(parentUpdateSpinner.getSelectedItem().toString());
@@ -89,13 +96,11 @@ public class updateParentInfo extends AppCompatActivity {
 
                     if (r) {
                         Toast.makeText(updateParentInfo.this, " تم تعديل رقم الجوال بنجاح ", Toast.LENGTH_SHORT).show();
+                        refreshing();
                     } else {
                         Toast.makeText(updateParentInfo.this, " يوجد خطأ ", Toast.LENGTH_SHORT).show();
                     }
                 }
-                Intent intent = getIntent();
-                finish();
-                startActivity(intent);
             }
         });
     }
@@ -166,5 +171,12 @@ public class updateParentInfo extends AppCompatActivity {
             }
         });
     }
+    public void refreshing (){
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
+    }
 
 }
+
+

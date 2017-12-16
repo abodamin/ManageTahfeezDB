@@ -65,10 +65,7 @@ MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor t
                         Toast.makeText(addNewStudent.this, " خطأ في الادخال ", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(addNewStudent.this, " تمت اضافة الطالب بنجاح ", Toast.LENGTH_SHORT).show();
-
-                        Intent intent = getIntent();
-                        finish();
-                        startActivity(intent);
+                        refreshing();
                     }
                 }
             }
@@ -94,5 +91,11 @@ MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor t
 
         // attaching data adapter to spinner
         halaqaSpinner.setAdapter(dataAdapter);
+    }
+
+    public void refreshing (){
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 }

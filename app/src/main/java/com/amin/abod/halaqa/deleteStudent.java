@@ -35,9 +35,7 @@ public class deleteStudent extends AppCompatActivity {
 
                 if (result >0 ){
                     Toast.makeText(deleteStudent.this, " تم حذف الطالب ", Toast.LENGTH_SHORT).show();
-                    Intent intent = getIntent();
-                    finish();
-                    startActivity(intent);
+                    refreshing();
                 } else {
                     Toast.makeText(deleteStudent.this, " خطأ ", Toast.LENGTH_SHORT).show();
                 }
@@ -64,4 +62,10 @@ public class deleteStudent extends AppCompatActivity {
         // attaching data adapter to spinner
         studentSpinner.setAdapter(dataAdapter);
     }
+    public void refreshing (){
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
+    }
+
 }

@@ -44,9 +44,7 @@ public class addHalaqa extends AppCompatActivity {
                     Toast.makeText(addHalaqa.this, " خطأ في الادخال ", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(addHalaqa.this, " تمت اضافة الحلقة بنجاح ", Toast.LENGTH_SHORT).show();
-                    Intent intent = getIntent();
-                    finish();
-                    startActivity(intent);
+                    refreshing();
                 }
             }
         });
@@ -69,5 +67,10 @@ public class addHalaqa extends AppCompatActivity {
 
         // attaching data adapter to spinner
         spinnerTeacher.setAdapter(dataAdapter);
+    }
+    public void refreshing (){
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 }

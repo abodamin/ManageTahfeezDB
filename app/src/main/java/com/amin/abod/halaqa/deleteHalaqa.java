@@ -34,10 +34,7 @@ public class deleteHalaqa extends AppCompatActivity {
 
                 if (result){
                     Toast.makeText(deleteHalaqa.this, " تم حذف الحلقة ", Toast.LENGTH_SHORT).show();
-
-                    Intent intent = getIntent();
-                    finish();
-                    startActivity(intent);
+                    refreshing();
                 } else {
                     Toast.makeText(deleteHalaqa.this, " خطأ ", Toast.LENGTH_SHORT).show();
                 }
@@ -64,5 +61,11 @@ public class deleteHalaqa extends AppCompatActivity {
 
         // attaching data adapter to spinner
         spinnerHalaqaToDelete.setAdapter(dataAdapter);
+    }
+
+    public void refreshing (){
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 }
