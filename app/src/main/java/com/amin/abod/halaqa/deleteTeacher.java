@@ -18,7 +18,7 @@ public class deleteTeacher extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       setContentView(R.layout.activity_delete_teacher);
+        setContentView(R.layout.activity_delete_teacher);
         final MyDataBase myDataBase = new MyDataBase(getApplicationContext());
 
         spinnerTeacherToDelete = (Spinner) findViewById(R.id.spinnerchooseTeacherToDelete);
