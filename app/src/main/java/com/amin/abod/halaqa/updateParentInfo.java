@@ -1,5 +1,6 @@
 package com.amin.abod.halaqa;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,8 @@ import android.widget.Toast;
 import com.amin.abod.halaqa.Module.MyDataBase;
 
 import java.util.List;
+
+
 
 public class updateParentInfo extends AppCompatActivity {
 
@@ -53,6 +56,7 @@ public class updateParentInfo extends AppCompatActivity {
         btnchangeParentInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if(updateParentSSN.getVisibility() == View.VISIBLE) {
 
                     String pSSNnew = updateParentSSN.getText().toString().trim();
@@ -89,6 +93,9 @@ public class updateParentInfo extends AppCompatActivity {
                         Toast.makeText(updateParentInfo.this, " يوجد خطأ ", Toast.LENGTH_SHORT).show();
                     }
                 }
+                Intent intent = getIntent();
+                finish();
+                startActivity(intent);
             }
         });
     }
