@@ -239,7 +239,7 @@ public class MyDataBase extends SQLiteOpenHelper{
                 ", HalaqaName TEXT" +
                 ", Mobile TEXT" +
                 ", PSSN INTEGER" +
-                ",FOREIGN KEY(HalaqaName) REFERENCES "+DB_Table_Halaqa+"(Hname) ON DELETE SET DEFAULT " +
+                ",FOREIGN KEY(HalaqaName) REFERENCES "+DB_Table_Halaqa+"(Hname) ON DELETE SET DEFAULT" +
                 ",FOREIGN KEY(PSSN) REFERENCES "+DB_Table_Parent+"(SSN) ON UPDATE CASCADE " +
                 ", PRIMARY KEY(SSN) )");   // student  F,L
 
@@ -253,9 +253,9 @@ public class MyDataBase extends SQLiteOpenHelper{
         );
 
         db.execSQL("create table "+ DB_Table_Halaqa +" " +   //Halaqa
-                "( Hname TEXT DEFAULT ''" +   //Halaqa name
-                ",category TEXT" +  //categoru of Halaqa
-                ", HTSSN INTEGER" +  //Halaqa Teacher ID
+                "( Hname TEXT DEFAULT 'لا يوجد حلقة'" +   //Halaqa name
+                ",category TEXT DEFAULT ''" +  //categoru of Halaqa
+                ", HTSSN INTEGER DEFAULT 1" +  //Halaqa Teacher ID
                 ",FOREIGN KEY(HTSSN) REFERENCES "+DB_Table_Teacher+"(TSSN) ON DELETE SET DEFAULT " +
                 ", PRIMARY KEY(Hname) )");
 
@@ -284,15 +284,10 @@ public class MyDataBase extends SQLiteOpenHelper{
     public boolean deleteTeacher (String tSSN){
         SQLiteDatabase db2 = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        db2.setForeignKeyConstraintsEnabled(false);
         numOfRaws = db2.delete(DB_Table_Teacher,"TSSN = ?",new String[]{tSSN});
-        Integer NULL=null;
-        contentValues.put("HTSSN",NULL);
-        numOfRaws = db2.update(DB_Table_Halaqa,contentValues,"HTSSN = ?",new String[] {String.valueOf(tSSN)});
-        db2.setForeignKeyConstraintsEnabled(true);
         if(numOfRaws <= 0) return false;
         else{
-        return true;
+            return true;
         }
     }
 
