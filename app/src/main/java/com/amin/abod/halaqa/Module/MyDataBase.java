@@ -9,6 +9,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.sql.SQLData;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -279,6 +280,11 @@ public class MyDataBase extends SQLiteOpenHelper{
 
         SQLiteDatabase db2 = this.getWritableDatabase();
         return db2.delete(DB_Table_Student,"SSN = ?",new String[]{SSN});
+    }
+
+    public int deleteTeacher (String tSSN){
+        SQLiteDatabase db2 = this.getWritableDatabase();
+        return db2.delete(DB_Table_Teacher,"TSSN = ?",new String[]{tSSN});
     }
 }
 
