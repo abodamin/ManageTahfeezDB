@@ -36,6 +36,7 @@
             android:ems="10"
             android:hint="@string/enterNewParentSSN"
             android:inputType="numberDecimal"
+            android:textAlignment="textStart"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +53,7 @@
             android:ems="10"
             android:hint="@string/EnterNewParentName"
             android:inputType="text|textPersonName"
-            android:textAlignment="textEnd"
+            android:textAlignment="textStart"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -123,12 +124,13 @@
             android:id="@+id/btnchangeParentInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:text="@string/btnUpdateStudent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.556" />
+            app:layout_constraintVertical_bias="1.0" />
     </android.support.constraint.ConstraintLayout>
 </RelativeLayout>

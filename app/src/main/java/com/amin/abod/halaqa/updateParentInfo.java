@@ -62,7 +62,10 @@ public class updateParentInfo extends AppCompatActivity {
 
                     String pSSNnew = updateParentSSN.getText().toString().trim();
                     int pSSNold = Integer.parseInt(parentUpdateSpinner.getSelectedItem().toString());
-
+                    if(TextUtils.isEmpty(pSSNnew)) {
+                        updateParentSSN.setError("لايمكن لهذه الخانة ان تكون فارغة");
+                        return;
+                    }else{
                     boolean r = myDataBase.updateParentInfoFun(pSSNnew, pSSNold,1);
 
                     if (r) {
@@ -71,7 +74,7 @@ public class updateParentInfo extends AppCompatActivity {
                     } else {
                         Toast.makeText(updateParentInfo.this, " يوجد خطأ ", Toast.LENGTH_SHORT).show();
                     }
-                }else if(updateParentName.getVisibility() == View.VISIBLE) {
+                }}else if(updateParentName.getVisibility() == View.VISIBLE) {
 
                     String pName = updateParentName.getText().toString().trim();
                     int pSSN = Integer.parseInt(parentUpdateSpinner.getSelectedItem().toString());
@@ -91,14 +94,19 @@ public class updateParentInfo extends AppCompatActivity {
                 }else if(updateParentMobile.getVisibility() == View.VISIBLE){
                     String pMobile = updateParentMobile.getText().toString().trim();
                     int pSSN = Integer.parseInt(parentUpdateSpinner.getSelectedItem().toString());
+                    if(TextUtils.isEmpty(pMobile)){
+                        updateParentMobile.setError("لايمكن لهذه الخانة ان تكون فارغة");
+                        return;
+                    }else {
 
-                    boolean r = myDataBase.updateParentInfoFun(pMobile, pSSN,3);
+                        boolean r = myDataBase.updateParentInfoFun(pMobile, pSSN, 3);
 
-                    if (r) {
-                        Toast.makeText(updateParentInfo.this, " تم تعديل رقم الجوال بنجاح ", Toast.LENGTH_SHORT).show();
-                        refreshing();
-                    } else {
-                        Toast.makeText(updateParentInfo.this, " يوجد خطأ ", Toast.LENGTH_SHORT).show();
+                        if (r) {
+                            Toast.makeText(updateParentInfo.this, " تم تعديل رقم الجوال بنجاح ", Toast.LENGTH_SHORT).show();
+                            refreshing();
+                        } else {
+                            Toast.makeText(updateParentInfo.this, " يوجد خطأ ", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }
             }
