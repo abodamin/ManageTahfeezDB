@@ -17,13 +17,15 @@ import java.util.List;
 public class updateStudent extends AppCompatActivity {
     MyDataBase myDataBase = new MyDataBase(this);
     Spinner studentsSpinner;
+    Button btnUpdateStudentInfo;
     RadioButton nameRadioButton,mobileRadioButton,halaqaRadioButton;
-    EditText studentName,studentMobile,studentHalaqa;
+    EditText studentName,studentMobile;
+    Spinner studentHalaqa;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Button btnUpdateStudentInfo = (Button) findViewById(R.id.btnUpdateStudentInfo);
+        btnUpdateStudentInfo = (Button) findViewById(R.id.btnUpdateStudentInfo);
 
         setContentView(R.layout.activity_update_student);
         nameRadioButton = (RadioButton) findViewById(R.id.radioEditName);
@@ -33,7 +35,7 @@ public class updateStudent extends AppCompatActivity {
         studentMobile = (EditText) findViewById(R.id.insertUpdatedStudentMobile);
         studentMobile.setVisibility(View.GONE);
         halaqaRadioButton = (RadioButton) findViewById(R.id.radioEditHalaqa);
-        studentHalaqa = (EditText) findViewById(R.id.insertUpdatedStudentHalaqa);
+        studentHalaqa = (Spinner) findViewById(R.id.spinnerHalaqaList);
         studentHalaqa.setVisibility(View.GONE);
         // Spinner element
         studentsSpinner = (Spinner) findViewById(R.id.spinnerStudentList);
@@ -42,27 +44,53 @@ public class updateStudent extends AppCompatActivity {
         onNameRadioButtonClick();
         onMobileRadioButtonClick();
         onHalaqaRadioButtonClick();
+        loadSpinnerHalaqa();
+
+        Button btnUpdateStudentInfo = (Button) findViewById(R.id.btnUpdateStudentInfo);
 
         btnUpdateStudentInfo.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
+                if(studentName.getVisibility() == View.VISIBLE) {
 
-                String sName = studentName.getText().toString().trim();
-                int SSN = Integer.parseInt(studentsSpinner.getSelectedItem().toString());
+                    String sName = studentName.getText().toString().trim();
+                    int SSN = Integer.parseInt(studentsSpinner.getSelectedItem().toString());
 
-                boolean r = myDataBase.updateStudentHifz(sName , SSN);
+                    boolean r = myDataBase.updateStudentInfo(sName, SSN,1);
 
-                if(r){
-                    Toast.makeText(updateStudent.this, " Added succefuly ", Toast.LENGTH_SHORT).show();
-                }else {
-                    Toast.makeText(updateStudent.this, " Error occured ", Toast.LENGTH_SHORT).show();
+                    if (r) {
+                        Toast.makeText(updateStudent.this, " تم تعديل الاسم بنجاح ", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(updateStudent.this, " يوجد خطأ ", Toast.LENGTH_SHORT).show();
+                    }
+                }else if(studentMobile.getVisibility() == View.VISIBLE){
+                    String sMobile = studentMobile.getText().toString().trim();
+                    int SSN = Integer.parseInt(studentsSpinner.getSelectedItem().toString());
+
+                    boolean r = myDataBase.updateStudentInfo(sMobile, SSN,2);
+
+                    if (r) {
+                        Toast.makeText(updateStudent.this, " تم تعديل رقم الجوال بنجاح ", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(updateStudent.this, " يوجد خطأ ", Toast.LENGTH_SHORT).show();
+                    }
+                }else if(studentHalaqa.getVisibility() == View.VISIBLE){
+                    String sNewHalaqa = studentHalaqa.getSelectedItem().toString().trim();
+                    int SSN = Integer.parseInt(studentsSpinner.getSelectedItem().toString());
+
+                    boolean r = myDataBase.updateStudentInfo(sNewHalaqa, SSN,3);
+
+                    if (r) {
+                        Toast.makeText(updateStudent.this, "تم نقل الطالب الى الحلقة الجديد بنجاح ", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(updateStudent.this, " يوجد خطأ ", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
 
 
     }
-
     public void onNameRadioButtonClick() {
         nameRadioButton.setOnClickListener(new View.OnClickListener() {
 
@@ -128,5 +156,24 @@ public class updateStudent extends AppCompatActivity {
 
         // attaching data adapter to spinner
         studentsSpinner.setAdapter(dataAdapter);
+    }
+
+    private void loadSpinnerHalaqa() {
+        // database handler
+        MyDataBase db = new MyDataBase(getApplicationContext());
+
+        // Spinner Drop down elements
+        List<String> lables = db.getAllLabels(4);
+
+        // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, lables);
+
+        // Drop down layout style - list view with radio button
+        dataAdapter
+                .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // attaching data adapter to spinner
+        studentHalaqa.setAdapter(dataAdapter);
     }
 }

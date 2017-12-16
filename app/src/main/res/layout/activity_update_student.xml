@@ -62,21 +62,17 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.356" />
 
-        <EditText
-            android:id="@+id/insertUpdatedStudentHalaqa"
+
+        <Spinner
+            android:id="@+id/spinnerHalaqaList"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="@string/updatedStudentHalaqa"
-            android:inputType="text"
-            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.356" />
+            app:layout_constraintVertical_bias="0.393" />
 
         <RadioGroup
             android:layout_width="128dp"
