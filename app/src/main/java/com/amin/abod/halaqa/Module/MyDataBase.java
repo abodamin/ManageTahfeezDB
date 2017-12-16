@@ -116,7 +116,8 @@ public class MyDataBase extends SQLiteOpenHelper{
             String a3 = result.getString(3);
             String a4 = result.getString(2);
             String a5 = result.getString(4);
-            arrayList.add("الإسم : "+a1 +"\n رقم الهوية : "+ a2 +"\nالحلقة : "+ a3 +"\nآخر سورة : "+ a4 +"\nرقم الجوال : "+ a5);
+            String a6 = result.getString(5);
+            arrayList.add("الإسم : "+a1 +"\n رقم الهوية : "+ a2 +"\nالحلقة : "+ a3 +"\nآخر سورة : "+ a4 +"\nرقم الجوال : "+ a5 +"\n رقم هوية ولي الأمر : "+ a6);
             result.moveToNext();
         }
         return arrayList;
