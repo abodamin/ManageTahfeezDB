@@ -95,10 +95,10 @@ public class MyDataBase extends SQLiteOpenHelper{
         Cursor result = db.rawQuery("select * from "+DB_Table_Teacher, null);
         result.moveToFirst();
         while (result.isAfterLast() == false){
-            String a1 = result.getString(0);
-            String a2 = result.getString(1);
+            String a1 = result.getString(1);
+            String a2 = result.getString(0);
             String a3 = result.getString(2);
-            arrayList.add(a1 +" - "+ a2 +" - "+ a3 );
+            arrayList.add("الإسم : "+a1 +"\nرقم الهوية : "+ a2 +"\n رقم الجوال : "+ a3 );
             result.moveToNext();
         }
         return arrayList;
@@ -116,7 +116,7 @@ public class MyDataBase extends SQLiteOpenHelper{
             String a3 = result.getString(3);
             String a4 = result.getString(2);
             String a5 = result.getString(4);
-            arrayList.add(a1 +" - "+ a2 +" - "+ a3 +" - "+ a4 +" - "+ a5);
+            arrayList.add("الإسم : "+a1 +"\n رقم الهوية : "+ a2 +"\nالحلقة : "+ a3 +"\nآخر سورة : "+ a4 +"\nرقم الجوال : "+ a5);
             result.moveToNext();
         }
         return arrayList;
@@ -137,7 +137,7 @@ public class MyDataBase extends SQLiteOpenHelper{
             //String a4 = teacherName.getString(0);
             //String a3 = teacherHalaqa.getString(0);
 
-            arrayList.add(a1 +" - "+ a2 +" - "+ a3 );
+            arrayList.add("إسم الحلقة : "+a1 +"\nمستوى الطلاب : "+ a2 +"\nرقم معلم الحلقة : "+ a3 );
             result.moveToNext();
         }
         return arrayList;
