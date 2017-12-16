@@ -255,5 +255,13 @@ public class MyDataBase extends SQLiteOpenHelper{
         db.execSQL("drop table if exists "+ DB_Table_Student);
         onCreate(db);
     }
+
+    //delete tuple student from a STUDENT_TABLE
+
+    public int deleteStudent (String SSN){
+
+        SQLiteDatabase db2 = this.getWritableDatabase();
+        return db2.delete(DB_Table_Student,"SSN = ?",new String[]{SSN});
+    }
 }
 

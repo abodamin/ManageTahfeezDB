@@ -51,9 +51,9 @@ MyDataBase myDataBase = new MyDataBase(this);
 
                    long result2 = myDataBase.setData(sName, sSSN, sHifz, sHalaqa, sMobile, paSSN);
                    if (result2 == -1) {
-                       Toast.makeText(addStudentHaveBrother.this, "Error occur ", Toast.LENGTH_SHORT).show();
+                       Toast.makeText(addStudentHaveBrother.this, "خطأ في الادخال", Toast.LENGTH_SHORT).show();
                    } else {
-                       Toast.makeText(addStudentHaveBrother.this, " Added succefuly ", Toast.LENGTH_SHORT).show();
+                       Toast.makeText(addStudentHaveBrother.this, " تمت اضافة الطالب بنجاح ", Toast.LENGTH_SHORT).show();
                    }
             }
         });

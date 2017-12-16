@@ -34,7 +34,7 @@ MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor t
         final EditText parentName = (EditText) findViewById(R.id.insertParentName);
         final EditText parentMobile = (EditText) findViewById(R.id.insertٍParentMobile);
         final EditText  parentSSN = (EditText) findViewById(R.id.insertٍParentSSN);
-        final EditText  sHalaqaName = (EditText) findViewById(R.id.insertHalaqaName);
+        //final EditText  sHalaqaName = (EditText) findViewById(R.id.insertHalaqaName);
 
         Button btnAddStudent = (Button) findViewById(R.id.btnInsertNewStudent);
 
@@ -46,27 +46,33 @@ MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor t
                 int pSSN = Integer.parseInt(parentSSN.getText().toString().trim());//taking integers must be like this as i know :)
                 String pMobile = parentMobile.getText().toString().trim();
 
-                long result1 = myDataBase.setParentData(pName,pSSN,pMobile);
+                long result1 = myDataBase.setParentData(pName, pSSN, pMobile);
 
-                //          ***  Getting Student Data ***
-                String sName = studentName.getText().toString().trim();
-                int sSSN = Integer.parseInt(studentSSN.getText().toString().trim());
-                String sHifz = studentStartHifz.getText().toString().trim();
-                String sHalaqa = halaqaSpinner.getSelectedItem().toString();
-                String sMobile = studentMobile.getText().toString().trim();
-                int paSSN = Integer.parseInt(parentSSN.getText().toString().trim());
-
-                long result2 = myDataBase.setData(sName , sSSN , sHifz , sHalaqa , sMobile, paSSN);
-
-                if (result1 == -1 || result2 == -1) {
-                    Toast.makeText(addNewStudent.this, " Error occure ", Toast.LENGTH_SHORT).show();
+                if (result1 == -1) {
+                    Toast.makeText(addNewStudent.this, " ولي الامر موجود استخدم قائمة تسجيل (لديه أخ) ", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(addNewStudent.this, " Added succesfuly ", Toast.LENGTH_SHORT).show();
+                    //          ***  Getting Student Data ***
+                    String sName = studentName.getText().toString().trim();
+                    int sSSN = Integer.parseInt(studentSSN.getText().toString().trim());
+                    String sHifz = studentStartHifz.getText().toString().trim();
+                    String sHalaqa = halaqaSpinner.getSelectedItem().toString();
+                    String sMobile = studentMobile.getText().toString().trim();
+                    int paSSN = Integer.parseInt(parentSSN.getText().toString().trim());
+
+                    long result2 = myDataBase.setData(sName, sSSN, sHifz, sHalaqa, sMobile, paSSN);
+                    if (result2 == -1) {
+                        Toast.makeText(addNewStudent.this, " خطأ في الادخال ", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(addNewStudent.this, " تمت اضافة الطالب بنجاح ", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
+
         });
 
-    }
+        }
+
+
 
     private void loadSpinnerData() {
         // database handler
@@ -87,3 +93,5 @@ MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor t
         halaqaSpinner.setAdapter(dataAdapter);
     }
 }
+
+
