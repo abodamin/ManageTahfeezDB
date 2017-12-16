@@ -19,7 +19,7 @@ public class updateParentInfo extends AppCompatActivity {
     MyDataBase myDataBase = new MyDataBase(this);
     Spinner parentUpdateSpinner;
     Button btnchangeParentInfo;
-    RadioButton SSNUpdateParentRadioButton,nameUpdateParentRadioButton,mobileUpdateParentRadioButton;
+    RadioButton radioEditParentSSN,radioEditParentName,radioEditParentMobile;
     EditText updateParentSSN,updateParentName,updateParentMobile;
 
     @Override
@@ -29,17 +29,17 @@ public class updateParentInfo extends AppCompatActivity {
        btnchangeParentInfo = (Button) findViewById(R.id.btnchangeParentInfo);
         //update SSN of Parent
 
-        SSNUpdateParentRadioButton = (RadioButton) findViewById(R.id.radioEditParentSSN);
+        radioEditParentSSN = (RadioButton) findViewById(R.id.radioEditParentSSN);
         updateParentSSN = (EditText) findViewById(R.id.insertUpdatedParentSSN);
-        SSNUpdateParentRadioButton.setVisibility(View.GONE);
+        updateParentSSN.setVisibility(View.GONE);
         //update name of Parent
-        nameUpdateParentRadioButton = (RadioButton) findViewById(R.id.radioEditParentName);
+        radioEditParentName = (RadioButton) findViewById(R.id.radioEditParentName);
         updateParentName = (EditText) findViewById(R.id.insertUpdatedParentName);
-        nameUpdateParentRadioButton.setVisibility(View.GONE);
+        updateParentName.setVisibility(View.GONE);
         //update Parent Mobile
-        mobileUpdateParentRadioButton = (RadioButton) findViewById(R.id.radioEditParentMobile);
+        radioEditParentMobile = (RadioButton) findViewById(R.id.radioEditParentMobile);
         updateParentMobile = (EditText) findViewById(R.id.insertUpdatedParentMobile);
-        mobileUpdateParentRadioButton.setVisibility(View.GONE);
+        updateParentMobile.setVisibility(View.GONE);
 
         // Spinner element
         parentUpdateSpinner = (Spinner) findViewById(R.id.spinnerParentUpdate);
@@ -98,7 +98,7 @@ public class updateParentInfo extends AppCompatActivity {
         MyDataBase db = new MyDataBase(getApplicationContext());
 
         // Spinner Drop down elements
-        List<String> lables = db.getAllLabels(5);
+        List<String> lables = db.getAllLabels(2);
 
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
@@ -113,7 +113,7 @@ public class updateParentInfo extends AppCompatActivity {
     }
 
     public void onSSNRadioButtonClick() {
-        SSNUpdateParentRadioButton.setOnClickListener(new View.OnClickListener() {
+        radioEditParentSSN.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -129,7 +129,7 @@ public class updateParentInfo extends AppCompatActivity {
     }
 
     public void onNameRadioButtonClick() {
-        nameUpdateParentRadioButton.setOnClickListener(new View.OnClickListener() {
+        radioEditParentName.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -145,7 +145,7 @@ public class updateParentInfo extends AppCompatActivity {
     }
 
     public void onMobileRadioButtonClick() {
-        mobileUpdateParentRadioButton.setOnClickListener(new View.OnClickListener() {
+        radioEditParentMobile.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
