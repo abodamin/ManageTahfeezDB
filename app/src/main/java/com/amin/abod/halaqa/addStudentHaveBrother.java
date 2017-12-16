@@ -33,7 +33,7 @@ MyDataBase myDataBase = new MyDataBase(this);
         final EditText studentMobile = (EditText) findViewById(R.id.insertٍStudentMobile);
         final EditText studentStartHifz = (EditText) findViewById(R.id.insertStartHifz);
         final EditText  parentSSN = (EditText) findViewById(R.id.insertٍParentSSN);
-        final EditText  sHalaqaName = (EditText) findViewById(R.id.insertHalaqaName);
+        //final EditText  sHalaqaName = (EditText) findViewById(R.id.insertHalaqaName); replaced by spinner
 
         Button btnAddStudent = (Button) findViewById(R.id.btnInsertNewStudent);
 
@@ -45,7 +45,7 @@ MyDataBase myDataBase = new MyDataBase(this);
                 String sName = studentName.getText().toString().trim();
                 int sSSN = Integer.parseInt(studentSSN.getText().toString().trim());
                 String sHifz = studentStartHifz.getText().toString().trim();
-                String sHalaqa = halaqaSpinner.getSelectedItem().toString();;
+                String sHalaqa = halaqaSpinner.getSelectedItem().toString();
                 String sMobile = studentMobile.getText().toString().trim();
                 int paSSN = Integer.parseInt(parentSSN.getText().toString().trim());
 

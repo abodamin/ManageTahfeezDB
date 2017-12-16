@@ -52,7 +52,7 @@ MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor t
                 String sName = studentName.getText().toString().trim();
                 int sSSN = Integer.parseInt(studentSSN.getText().toString().trim());
                 String sHifz = studentStartHifz.getText().toString().trim();
-                String sHalaqa = sHalaqaName.getText().toString().trim();
+                String sHalaqa = halaqaSpinner.getSelectedItem().toString();
                 String sMobile = studentMobile.getText().toString().trim();
                 int paSSN = Integer.parseInt(parentSSN.getText().toString().trim());
 
