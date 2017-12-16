@@ -49,7 +49,7 @@ MyDataBase myDataBase = new MyDataBase(this);
                 String sMobile = studentMobile.getText().toString().trim();
                 int paSSN = Integer.parseInt(parentSSN.getText().toString().trim());
 
-                   long result2 = myDataBase.setData(sName, sSSN, sHifz, sHalaqa, sMobile, paSSN);
+                   long result2 = myDataBase.setStudentData(sName, sSSN, sHifz, sHalaqa, sMobile, paSSN);
                    if (result2 == -1) {
                        Toast.makeText(addStudentHaveBrother.this, "خطأ في الادخال", Toast.LENGTH_SHORT).show();
                    } else {

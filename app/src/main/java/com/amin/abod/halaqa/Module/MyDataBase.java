@@ -24,7 +24,7 @@ public class MyDataBase extends SQLiteOpenHelper{
         super(context, DB_NAME, null, 1);
     }
 
-    public long setData(String sName, int studentSSN , String sHifz , String sHalaqa , String sMobile , int parentSSN){
+    public long setStudentData(String sName, int studentSSN , String sHifz , String sHalaqa , String sMobile , int parentSSN){
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();

@@ -22,7 +22,7 @@ public class followHifz extends AppCompatActivity {
         setContentView(R.layout.activity_follow_hifz);
 
         final EditText hifzSoura = (EditText) findViewById(R.id.insertHifzSourah);
-        EditText hifzAya = (EditText) findViewById(R.id.insertHifzAyah);
+        final EditText hifzAya = (EditText) findViewById(R.id.insertHifzAyah);
         Button btnUpdateHifz = (Button) findViewById(R.id.btnUpdeteHifz);
 
         // Spinner element
@@ -30,12 +30,13 @@ public class followHifz extends AppCompatActivity {
 
         loadSpinnerData();
 
-        btnUpdateHifz.setOnClickListener(new View.OnClickListener() {
+        btnUpdateHifz.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 String soura = hifzSoura.getText().toString().trim();
+                int Aya = Integer.parseInt(hifzAya.getText().toString().trim());
                 int sID = Integer.parseInt(studentSpinner.getSelectedItem().toString());
-
+                soura += String.valueOf(" : "+Aya);
                 boolean r = myDataBase.updateStudentHifz(soura , sID);
 
                 if(r){
