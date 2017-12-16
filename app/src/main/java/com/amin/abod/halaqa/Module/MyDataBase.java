@@ -253,15 +253,15 @@ public class MyDataBase extends SQLiteOpenHelper{
                 "PRIMARY KEY(SSN))"
         );
 
-        db.execSQL("create table "+ DB_Table_Halaqa+" " +   //Halaqa
+        db.execSQL("create table "+ DB_Table_Halaqa +" " +   //Halaqa
                 "( Hname TEXT " +   //Halaqa name
                 ",category TEXT" +  //categoru of Halaqa
                 ", HTSSN INTEGER" +  //Halaqa Teacher ID
-                ", FOREIGN KEY(HTSSN) REFERENCES "+DB_Table_Teacher+"(TSSN) " +
+                ",FOREIGN KEY(HTSSN) REFERENCES "+DB_Table_Teacher+"(TSSN) " +
                 ", PRIMARY KEY(Hname) )");
 
         db.execSQL("create table "+DB_Table_Teacher +"(" +  //teacher
-                " TSSN INTEGER" +     //teacher SSN
+                " TSSN INTEGER DEFAULT 0" +     //teacher SSN
                 ",Tname TEXT" +     //* F,L
                 ",Mobile TEXT" +
                 ", PRIMARY KEY (TSSN) )");
