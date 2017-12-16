@@ -34,9 +34,12 @@ public class deleteStudent extends AppCompatActivity {
                 Integer result = myDataBase.deleteStudent(SSN);
 
                 if (result >0 ){
-                    Toast.makeText(deleteStudent.this, " Deleted ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(deleteStudent.this, " تم حذف الطالب ", Toast.LENGTH_SHORT).show();
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
                 } else {
-                    Toast.makeText(deleteStudent.this, " Error ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(deleteStudent.this, " خطأ ", Toast.LENGTH_SHORT).show();
                 }
             }
         });

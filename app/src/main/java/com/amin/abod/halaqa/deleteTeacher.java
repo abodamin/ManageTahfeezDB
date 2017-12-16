@@ -1,5 +1,6 @@
 package com.amin.abod.halaqa;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -32,9 +33,12 @@ public class deleteTeacher extends AppCompatActivity {
                 boolean result = myDataBase.deleteTeacher(tSSN);
 
                 if (result){
-                    Toast.makeText(deleteTeacher.this, " Deleted ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(deleteTeacher.this, " تم حذف المعلم ", Toast.LENGTH_SHORT).show();
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
                 } else {
-                    Toast.makeText(deleteTeacher.this, " Error ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(deleteTeacher.this, " خطأ ", Toast.LENGTH_SHORT).show();
                 }
             }
         });

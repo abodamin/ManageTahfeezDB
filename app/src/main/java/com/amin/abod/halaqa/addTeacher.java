@@ -1,5 +1,6 @@
 package com.amin.abod.halaqa;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,9 +32,13 @@ MyDataBase myDataBase = new MyDataBase(this);
                 long result = myDataBase.setTeacherDate(tSSN, tName, tMobile);
 
                 if(result==-1){
-                    Toast.makeText(addTeacher.this, " Error occured ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(addTeacher.this, " خطأ بالادخال ", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(addTeacher.this, " Added succefuly ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(addTeacher.this, " تم اضافة المعلم بنجاح ", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
                 }
             }
         });

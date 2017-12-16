@@ -1,5 +1,6 @@
 package com.amin.abod.halaqa;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -43,6 +44,9 @@ public class addHalaqa extends AppCompatActivity {
                     Toast.makeText(addHalaqa.this, " خطأ في الادخال ", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(addHalaqa.this, " تمت اضافة الحلقة بنجاح ", Toast.LENGTH_SHORT).show();
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
                 }
             }
         });

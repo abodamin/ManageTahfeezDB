@@ -40,9 +40,12 @@ public class followHifz extends AppCompatActivity {
                 boolean r = myDataBase.updateStudentHifz(soura , sID);
 
                 if(r){
-                    Toast.makeText(followHifz.this, " Added succefuly ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(followHifz.this, " تم تحديث حفظ الطالب ", Toast.LENGTH_SHORT).show();
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
                 }else {
-                    Toast.makeText(followHifz.this, " Error occured ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(followHifz.this, " خطأ ", Toast.LENGTH_SHORT).show();
                 }
             }
         });

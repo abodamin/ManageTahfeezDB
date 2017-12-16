@@ -1,5 +1,6 @@
 package com.amin.abod.halaqa;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -32,9 +33,13 @@ public class deleteHalaqa extends AppCompatActivity {
                 boolean result = myDataBase.deleteHalaqa(hName);
 
                 if (result){
-                    Toast.makeText(deleteHalaqa.this, " Deleted ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(deleteHalaqa.this, " تم حذف الحلقة ", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
                 } else {
-                    Toast.makeText(deleteHalaqa.this, " Error ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(deleteHalaqa.this, " خطأ ", Toast.LENGTH_SHORT).show();
                 }
             }
         });

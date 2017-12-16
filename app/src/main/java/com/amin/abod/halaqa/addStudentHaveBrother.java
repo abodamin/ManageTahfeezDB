@@ -1,5 +1,6 @@
 package com.amin.abod.halaqa;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -54,6 +55,10 @@ MyDataBase myDataBase = new MyDataBase(this);
                        Toast.makeText(addStudentHaveBrother.this, "خطأ في الادخال", Toast.LENGTH_SHORT).show();
                    } else {
                        Toast.makeText(addStudentHaveBrother.this, " تمت اضافة الطالب بنجاح ", Toast.LENGTH_SHORT).show();
+
+                       Intent intent = getIntent();
+                       finish();
+                       startActivity(intent);
                    }
             }
         });
