@@ -26,12 +26,10 @@
             android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="normal|bold"
-            app:layout_constraintBottom_toTopOf="@+id/btnViewStudent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.19999999" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/btnViewStudent"
@@ -42,10 +40,12 @@
             android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="normal|bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnAddStudent" />
+            app:layout_constraintTop_toBottomOf="@+id/btnAddStudent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/btnHifz"
@@ -56,12 +56,10 @@
             android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="normal|bold"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.281" />
+            app:layout_constraintTop_toBottomOf="@+id/btnViewStudent" />
 
         <Button
             android:id="@+id/btnUpdateStudent"

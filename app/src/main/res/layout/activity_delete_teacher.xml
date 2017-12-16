@@ -31,22 +31,25 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
         <Spinner
             android:id="@+id/spinnerchooseTeacherToDelete"
             android:layout_width="336dp"
             android:layout_height="37dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.133" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewChooseTeacher"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textViewChooseTeacher"
             android:layout_width="336dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="@string/chooseTeacherToDelete"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -54,7 +57,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.035" />
+            app:layout_constraintVertical_bias="0.0" />
 
     </android.support.constraint.ConstraintLayout>
 </RelativeLayout>

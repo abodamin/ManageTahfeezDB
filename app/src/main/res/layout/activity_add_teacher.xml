@@ -27,42 +27,44 @@
             android:ems="10"
             android:hint="@string/teacherName"
             android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <EditText
             android:id="@+id/insertTeacherSSN"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="68dp"
+            android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="@string/teacherSSN"
             android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_width="match_parent" />
+            app:layout_constraintTop_toBottomOf="@+id/insertTeacherName" />
 
         <EditText
             android:id="@+id/insertTeacherMobile"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="128dp"
+            android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="@string/teacherMobile"
             android:inputType="phone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.748" />
+            app:layout_constraintTop_toBottomOf="@+id/insertTeacherSSN" />
 
         <Button
             android:id="@+id/btnInsertTeacherInfo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:layout_marginTop="8dp"
             android:text="@string/addTeacherAdd"
             android:textAlignment="center"
@@ -72,8 +74,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.451" />
+            app:layout_constraintTop_toBottomOf="@+id/insertTeacherMobile"
+            app:layout_constraintVertical_bias="1.0" />
 
     </android.support.constraint.ConstraintLayout>
 </RelativeLayout>

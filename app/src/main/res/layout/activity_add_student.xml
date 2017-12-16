@@ -23,6 +23,7 @@
             android:id="@+id/btnNewStudent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="@string/newStudent"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -30,20 +31,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.037" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/btnHaveBrother"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="8dp"
             android:text="@string/haveBrother"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.115" />
+            app:layout_constraintTop_toBottomOf="@+id/btnNewStudent"
+            app:layout_constraintVertical_bias="0.0" />
     </android.support.constraint.ConstraintLayout>
 </RelativeLayout>

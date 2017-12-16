@@ -23,6 +23,8 @@
             android:id="@+id/btnDeleteStudent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
             android:text="@string/deleteStudent"
             android:textAlignment="center"
             android:textSize="24sp"
@@ -32,30 +34,28 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.037" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/btnDeleteTeacher"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/deleteTeacher"
             android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnDeleteStudent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/btnDeleteStudent" />
 
         <Button
             android:id="@+id/btnDeleteHalaqa"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/deleteHalaqa"
             android:textAlignment="center"
             android:textSize="24sp"
@@ -64,14 +64,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.305" />
+            app:layout_constraintTop_toBottomOf="@+id/btnDeleteTeacher"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/btnUpdateParentInfo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/updateParentInfo"
             android:textAlignment="center"
             android:textSize="24sp"
@@ -80,8 +81,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.451" />
+            app:layout_constraintTop_toBottomOf="@+id/btnDeleteHalaqa"
+            app:layout_constraintVertical_bias="0.0" />
 
     </android.support.constraint.ConstraintLayout>
 </RelativeLayout>
