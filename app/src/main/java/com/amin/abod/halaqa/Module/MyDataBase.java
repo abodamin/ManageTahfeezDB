@@ -207,6 +207,17 @@ public class MyDataBase extends SQLiteOpenHelper{
         return true;
     }
 
+    public boolean updateStudentName(String newSName , int SSN){    //update data of last soura
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("name",newSName);
+        numOfRaws = db.update(DB_Table_Student,contentValues,"SSN = ?",new String[] {String.valueOf(SSN)});  //id here should be as String because of the data table
+        if(numOfRaws <= 0) return false;
+        else
+            return true;
+    }
+
     @Override
     public void onConfigure(SQLiteDatabase db){
         db.setForeignKeyConstraintsEnabled(true);

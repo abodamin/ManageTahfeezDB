@@ -70,9 +70,7 @@ MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor t
 
         });
 
-        }
-
-
+    }
 
     private void loadSpinnerData() {
         // database handler
@@ -93,5 +91,3 @@ MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor t
         halaqaSpinner.setAdapter(dataAdapter);
     }
 }
-
-

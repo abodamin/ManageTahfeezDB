@@ -53,13 +53,14 @@
             android:ems="10"
             android:hint="@string/updatedStudentMobile"
             android:inputType="phone"
+            android:textAlignment="textEnd"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.49" />
+            app:layout_constraintVertical_bias="0.356" />
 
         <EditText
             android:id="@+id/insertUpdatedStudentHalaqa"
@@ -75,19 +76,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.638" />
-
-        <Button
-            android:id="@+id/btnUpdateStudent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btnUpdateStudent"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintVertical_bias="0.356" />
 
         <RadioGroup
             android:layout_width="128dp"
@@ -129,6 +118,18 @@
                 android:textAlignment="textStart" />
 
         </RadioGroup>
+
+        <Button
+            android:id="@+id/btnUpdateStudentInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnUpdateStudent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.556" />
 
     </android.support.constraint.ConstraintLayout>
 </RelativeLayout>
