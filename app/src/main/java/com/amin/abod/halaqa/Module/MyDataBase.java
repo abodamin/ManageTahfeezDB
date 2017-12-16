@@ -10,6 +10,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class MyDataBase extends SQLiteOpenHelper{
@@ -140,6 +141,30 @@ public class MyDataBase extends SQLiteOpenHelper{
             result.moveToNext();
         }
         return arrayList;
+    }
+
+    public List<String> getAllLabels(){
+        List<String> labels = new ArrayList<String>();
+
+        // Select All Query
+        String selectQuery = "SELECT name FROM " + DB_Table_Student;
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                labels.add(cursor.getString(0));
+            } while (cursor.moveToNext());
+        }
+
+        // closing connection
+        cursor.close();
+        db.close();
+
+        // returning lables
+        return labels;
     }
 
     public boolean getParentBySSN(int pSSN){

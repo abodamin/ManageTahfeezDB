@@ -30,25 +30,20 @@ MyDataBase myDataBase = new MyDataBase(this);
             @Override
             public void onClick(View v) {
                 //to check the parent ID is there already or not then add the student
-                // but it is crashing when we add exixsting parent id :\
-                int pSSN = Integer.parseInt(parentSSN.getText().toString().trim());
-                boolean result = myDataBase.getParentBySSN(pSSN);
-                if( result) {
-                   String sName = studentName.getText().toString().trim();
-                   int sSSN = Integer.parseInt(studentSSN.getText().toString().trim());
-                   String sHifz = studentStartHifz.getText().toString().trim();
-                   String sHalaqa = sHalaqaName.getText().toString().trim();
-                   String sMobile = studentMobile.getText().toString().trim();
+                // but it is crashing when we add exixsting parent id :\String sName = studentName.getText().toString().trim();
+                String sName = studentName.getText().toString().trim();
+                int sSSN = Integer.parseInt(studentSSN.getText().toString().trim());
+                String sHifz = studentStartHifz.getText().toString().trim();
+                String sHalaqa = sHalaqaName.getText().toString().trim();
+                String sMobile = studentMobile.getText().toString().trim();
+                int paSSN = Integer.parseInt(parentSSN.getText().toString().trim());
 
-                   long result2 = myDataBase.setData(sName, sSSN, sHifz, sHalaqa, sMobile, pSSN);
+                   long result2 = myDataBase.setData(sName, sSSN, sHifz, sHalaqa, sMobile, paSSN);
                    if (result2 == -1) {
                        Toast.makeText(addStudentHaveBrother.this, "Error occur ", Toast.LENGTH_SHORT).show();
                    } else {
                        Toast.makeText(addStudentHaveBrother.this, " Added succefuly ", Toast.LENGTH_SHORT).show();
                    }
-               }else {
-                    Toast.makeText(addStudentHaveBrother.this, "Cant find parent ID !! ", Toast.LENGTH_LONG).show();
-                }
             }
         });
 
