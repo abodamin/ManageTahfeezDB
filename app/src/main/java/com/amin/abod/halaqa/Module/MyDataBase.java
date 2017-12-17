@@ -98,7 +98,7 @@ public class MyDataBase extends SQLiteOpenHelper{
             String a1 = result.getString(1);
             String a2 = result.getString(0);
             String a3 = result.getString(2);
-            arrayList.add("الإسم : "+a1 +"\nرقم الهوية : "+ a2 +"\n رقم الجوال : "+ a3 );
+            arrayList.add("الإسم : "+a1 +"\nرقم الهوية : "+ a2 +"\n رقم الجوال : "+ a3 +"\n");
             result.moveToNext();
         }
         return arrayList;
@@ -117,7 +117,7 @@ public class MyDataBase extends SQLiteOpenHelper{
             String a4 = result.getString(2);
             String a5 = result.getString(4);
             String a6 = result.getString(5);
-            arrayList.add("الإسم : "+a1 +"\n رقم الهوية : "+ a2 +"\nالحلقة : "+ a3 +"\nآخر سورة : "+ a4 +"\nرقم الجوال : "+ a5 +"\n رقم هوية ولي الأمر : "+ a6);
+            arrayList.add("الإسم : "+a1 +"\n رقم الهوية : "+ a2 +"\nالحلقة : "+ a3 +"\nآخر سورة : "+ a4 +"\nرقم الجوال : "+ a5 +"\n رقم هوية ولي الأمر : "+ a6+"\n");
             result.moveToNext();
         }
         return arrayList;
@@ -138,7 +138,7 @@ public class MyDataBase extends SQLiteOpenHelper{
             //String a4 = teacherName.getString(0);
             //String a3 = teacherHalaqa.getString(0);
 
-            arrayList.add("إسم الحلقة : "+a1 +"\nمستوى الطلاب : "+ a2 +"\nرقم معلم الحلقة : "+ a3 );
+            arrayList.add("إسم الحلقة : "+a1 +"\nمستوى الطلاب : "+ a2 +"\nرقم معلم الحلقة : "+ a3 +"\n");
             result.moveToNext();
         }
         return arrayList;

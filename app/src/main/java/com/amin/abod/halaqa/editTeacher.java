@@ -51,7 +51,10 @@ MyDataBase myDataBase = new MyDataBase(this);
 
                     String newTeacherName = insertUpdatedTeacherName.getText().toString().trim();
                     int tSSN = Integer.parseInt(teacherUpdateSpinner.getSelectedItem().toString());
-
+                    if(TextUtils.isEmpty(newTeacherName)){
+                        insertUpdatedTeacherName.setError("لايمكن لهذه الخانة ان تكون فارغة");
+                        return;
+                    }else{
                     boolean r = myDataBase.updateTeacherInfo(newTeacherName, tSSN , 1);
 
                     if (r) {
@@ -59,7 +62,7 @@ MyDataBase myDataBase = new MyDataBase(this);
                         refreshing();
                     } else {
                         Toast.makeText(getApplicationContext(), " يوجد خطأ ", Toast.LENGTH_SHORT).show();
-                    }
+                    }}
 
 
                 }else if(insertUpdatedTeacherMobile.getVisibility() == View.VISIBLE) {
@@ -67,13 +70,16 @@ MyDataBase myDataBase = new MyDataBase(this);
                         String newTeacherMobile = insertUpdatedTeacherMobile.getText().toString().trim();
                         int tSSN = Integer.parseInt(teacherUpdateSpinner.getSelectedItem().toString());
                         boolean r = myDataBase.updateTeacherInfo(newTeacherMobile, tSSN , 2);
-
+                    if(TextUtils.isEmpty(newTeacherMobile)){
+                        insertUpdatedTeacherMobile.setError("لايمكن لهذه الخانة ان تكون فارغة");
+                        return;
+                    }else{
                         if (r) {
                             Toast.makeText(getApplicationContext(), " تم تعديل الرقم بنجاح ", Toast.LENGTH_SHORT).show();
                             refreshing();
                         } else {
                             Toast.makeText(getApplicationContext(), " يوجد خطأ ", Toast.LENGTH_SHORT).show();
-                        }
+                        }}
 
 
                     }

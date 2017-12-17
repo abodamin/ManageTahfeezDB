@@ -29,6 +29,7 @@ public class editHalaqat extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
+
         btnUpdateHalaqa = (Button) findViewById(R.id.btnchangeHalaqaInfo);
         setContentView(R.layout.activity_edit_halaqat);
 

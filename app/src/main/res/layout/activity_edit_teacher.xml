@@ -18,6 +18,15 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true">
 
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="إختر المعلم"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
         <Spinner
             android:id="@+id/spinnerTeacherUpdate"
             android:layout_width="0dp"
@@ -34,9 +43,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:ems="10"
-            android:hint="@string/EnterNewParentName"
+            android:hint="ادخل اسم المعلم الجديد"
             android:inputType="text|textPersonName"
-            android:textAlignment="textEnd"
+            android:textAlignment="textStart"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:ems="10"
-            android:hint="@string/enterNewParentMobile"
+            android:hint="ادخل رقم المعلم الجديد"
             android:inputType="phone"
             android:textAlignment="textEnd"
             android:textSize="24sp"

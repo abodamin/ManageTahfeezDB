@@ -3,6 +3,7 @@ package com.amin.abod.halaqa;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -34,16 +35,28 @@ public class followHifz extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String soura = hifzSoura.getText().toString().trim();
-                int Aya = Integer.parseInt(hifzAya.getText().toString().trim());
-                int sID = Integer.parseInt(studentSpinner.getSelectedItem().toString());
-                soura += String.valueOf("("+Aya+")");
-                boolean r = myDataBase.updateStudentHifz(soura , sID);
+                int Aya = 0;
+                String AyaText = hifzAya.getText().toString().trim();
 
-                if(r){
-                    Toast.makeText(followHifz.this, " تم تحديث حفظ الطالب ", Toast.LENGTH_SHORT).show();
-                    refreshing();
-                }else {
-                    Toast.makeText(followHifz.this, " خطأ ", Toast.LENGTH_SHORT).show();
+                if (! TextUtils.isEmpty(AyaText)) Aya = Integer.parseInt(AyaText);
+                int sID = Integer.parseInt(studentSpinner.getSelectedItem().toString());
+
+                if (TextUtils.isEmpty(soura)){
+                    hifzSoura.setError("لا يمكن لهذه الخانة ان تكون شاغرة");
+                    return;
+                }else if(TextUtils.isEmpty(AyaText)){
+                    hifzAya.setError("لا يمكن لهذه الخانة ان تكون شاغرة");
+                    return;
+            }else {
+                    soura += String.valueOf("(" + Aya + ")");
+                    boolean r = myDataBase.updateStudentHifz(soura, sID);
+
+                    if (r) {
+                        Toast.makeText(followHifz.this, " تم تحديث حفظ الطالب ", Toast.LENGTH_SHORT).show();
+                        refreshing();
+                    } else {
+                        Toast.makeText(followHifz.this, " خطأ ", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
