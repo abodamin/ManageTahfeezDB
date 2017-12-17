@@ -9,7 +9,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    tools:context="com.amin.abod.halaqa.editTeacher">
+    tools:context="com.amin.abod.halaqa.updateParentInfo">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,19 +18,15 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true">
 
-        <EditText
-            android:id="@+id/insertTeacherSSNtoUpdate"
+        <Spinner
+            android:id="@+id/spinnerTeacherUpdate"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/insertTSSNtoUpdate"
-            android:inputType="number"
+            android:layout_height="35dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.036" />
+            app:layout_constraintVertical_bias="0.029999971" />
 
         <EditText
             android:id="@+id/insertUpdatedTeacherName"
@@ -38,14 +34,16 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:ems="10"
-            android:hint="@string/updatedTeacherName"
-            android:inputType="textPersonName"
+            android:hint="@string/EnterNewParentName"
+            android:inputType="text|textPersonName"
+            android:textAlignment="textEnd"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.143" />
+            app:layout_constraintVertical_bias="0.356" />
 
         <EditText
             android:id="@+id/insertUpdatedTeacherMobile"
@@ -53,45 +51,59 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:ems="10"
-            android:hint="@string/updatedTeacherMobile"
+            android:hint="@string/enterNewParentMobile"
             android:inputType="phone"
+            android:textAlignment="textEnd"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.265" />
+            app:layout_constraintVertical_bias="0.356" />
 
-        <TextView
-            android:id="@+id/textView"
+        <RadioGroup
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/noteUpdateStudent"
-            android:textColor="@android:color/holo_red_dark"
-            android:textSize="24sp"
-            android:textStyle="bold"
+            android:layout_height="78dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintHorizontal_bias="0.928"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.462" />
+            app:layout_constraintVertical_bias="0.159">
+
+            <RadioButton
+                android:id="@+id/radioEditTeacherName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:layoutDirection="rtl"
+                android:text="@string/editTeacherName"
+                android:textAlignment="textStart" />
+
+            <RadioButton
+                android:id="@+id/radioEditTeacherMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:layoutDirection="rtl"
+                android:text="@string/editTeacherMobile"
+                android:textAlignment="textStart" />
+
+        </RadioGroup>
 
         <Button
-            android:id="@+id/btnUpdateTeacher"
+            android:id="@+id/btnchangeTeacherInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
             android:text="@string/btnUpdateStudent"
-            android:textSize="24sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_bias="1.0" />
-
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.556" />
     </android.support.constraint.ConstraintLayout>
 </RelativeLayout>

@@ -79,4 +79,10 @@
     <string name="EnterNewParentName">ادخل اسم ولي الامر الجديد</string>
     <string name="enterNewParentMobile">ادخل رقم الجوال الجديد لولي الأمر</string>
     <string name="enterNewParentSSN">ادخل رقم الهوية الجديد لولي الأمر</string>
+    <string name="editTeacherName">تعديل اسم المعلم</string>
+    <string name="editTeacherMobile">تعديل رقم جوال المعلم</string>
+    <string name="EditHalaqaName">تعديل اسم الحلقة</string>
+    <string name="EditHalaqaTeacher">تعديل معلم الحلقة</string>
+    <string name="EditHalaqaTecher">ادخل اسم معلم الحلقة</string>
+    <string name="EditHalaName">ادخل اسم الحلقة</string>
 </resources>

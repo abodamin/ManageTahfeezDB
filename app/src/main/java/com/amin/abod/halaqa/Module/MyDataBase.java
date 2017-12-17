@@ -225,6 +225,47 @@ public class MyDataBase extends SQLiteOpenHelper{
             return true;
         }
     }
+    public boolean updateTeacherInfo(String updatedColumn, int SSN, int x){    //update data of last soura
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        switch(x){
+            case 1 : contentValues.put("Tname",updatedColumn);
+                numOfRaws = db.update(DB_Table_Teacher,contentValues,"TSSN = ?",new String[] {String.valueOf(SSN)}); break;
+            case 2 : contentValues.put("Mobile",updatedColumn);
+                numOfRaws = db.update(DB_Table_Teacher,contentValues,"TSSN = ?",new String[] {String.valueOf(SSN)}); break;
+        }
+        if(numOfRaws <= 0) return false;
+        else{
+            return true;
+        }
+    }
+
+    public boolean updateHalaqaNameInfo(String updatedColumn, String halaqaName){    //update data of last soura
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("Hname",updatedColumn);
+        numOfRaws = db.update(DB_Table_Halaqa,contentValues,"Hname = ?",new String[] {halaqaName});
+
+        if(numOfRaws <= 0) return false;
+        else{
+            return true;
+        }
+    }
+
+
+    public boolean updateHalaqaTeacherInfo(int updatedColumn, String halaqaName){    //update data of last soura
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("HTSSN",updatedColumn);
+        numOfRaws = db.update(DB_Table_Halaqa,contentValues,"Hname = ?",new String[] {halaqaName});
+
+        if(numOfRaws <= 0) return false;
+        else{
+            return true;
+        }
+    }
 
     public boolean updateParentInfoFun(String updatedColumn, int pSSN, int x){    //update data of last soura
         SQLiteDatabase db = this.getWritableDatabase();

@@ -19,10 +19,11 @@ import java.util.List;
 public class updateStudent extends AppCompatActivity {
     MyDataBase myDataBase = new MyDataBase(this);
     Spinner studentsSpinner;
+    Spinner studentHalaqa;
+
     Button btnUpdateStudentInfo;
     RadioButton nameRadioButton, mobileRadioButton, halaqaRadioButton;
     EditText studentName, studentMobile;
-    Spinner studentHalaqa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +44,7 @@ public class updateStudent extends AppCompatActivity {
         // Spinner element
         studentsSpinner = (Spinner) findViewById(R.id.spinnerStudentList);
 
-        loadSpinnerData();
+        loadSpinnerData(); //loading student spinner
         onNameRadioButtonClick();
         onMobileRadioButtonClick();
         onHalaqaRadioButtonClick();
