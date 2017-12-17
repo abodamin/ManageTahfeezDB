@@ -79,10 +79,24 @@
     <string name="EnterNewParentName">ادخل اسم ولي الامر الجديد</string>
     <string name="enterNewParentMobile">ادخل رقم الجوال الجديد لولي الأمر</string>
     <string name="enterNewParentSSN">ادخل رقم الهوية الجديد لولي الأمر</string>
+    <string name="title_activity_welcome">الصفحة الترحيبية</string>
+    <string name="next">التالي</string>
+    <string name="skip">تخطي</string>
+    <string name="start">البدأ</string>
+
+    <string name="slide_1_title">السلام عليكم ورحمة الله وبركاته !</string>
+    <string name="slide_1_desc">تستطيع بسهولة إدارة تحفيظ القرآن باستخدام تطبيقنا!</string>
+
+    <string name="slide_2_title">اشياء يجب أن تفعلها !</string>
+    <string name="slide_2_desc">بسبب القيود في قاعده البيانات سننقلك الآن لأضافه معلم واحد وربطه بحلقته لكي تستطيع العمل بدون أي مشاكل إن شاء الله</string>
+
+    <string name="slide_3_title"> فلنبدأ !</string>
+    <string name="slide_3_desc"> نأمل لك تجربة ممتعة ومفيدة عند استخدام التطبيق !</string>
     <string name="editTeacherName">تعديل اسم المعلم</string>
     <string name="editTeacherMobile">تعديل رقم جوال المعلم</string>
     <string name="EditHalaqaName">تعديل اسم الحلقة</string>
     <string name="EditHalaqaTeacher">تعديل معلم الحلقة</string>
     <string name="EditHalaqaTecher">ادخل اسم معلم الحلقة</string>
     <string name="EditHalaName">ادخل اسم الحلقة</string>
+
 </resources>

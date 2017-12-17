@@ -3,6 +3,7 @@ package com.amin.abod.halaqa;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -38,14 +39,28 @@ public class halaqatFreshStart extends AppCompatActivity {
                 int hTeacherSSN = Integer.parseInt(spinnerTeacher.getSelectedItem().toString());
                 String hName = halaqaName.getText().toString().trim();
                 String hCategory = halaqaCategory.getText().toString().trim();
+                long result=0,result1=0;
 
-                long result = myDataBase.setHalaqaData(hName, hCategory, hTeacherSSN);
-
-                if(result==-1){
-                    Toast.makeText(halaqatFreshStart.this, " خطأ في الادخال ", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(halaqatFreshStart.this, " تمت اضافة الحلقة بنجاح ", Toast.LENGTH_SHORT).show();
-                    startActivity(toMainApp);
+                if(! TextUtils.isEmpty(hName) && ! TextUtils.isEmpty(hCategory) && result1==0){
+                    result = myDataBase.setHalaqaData(hName, hCategory, hTeacherSSN);
+                    result1 = 5;
+                }
+                else if(TextUtils.isEmpty(hName)) {
+                    halaqaName.setError("يجب إدخال اسم الحلقة");
+                    result1=-1;
+                }
+                else if(TextUtils.isEmpty(hCategory)){
+                    halaqaCategory.setError("يجب إدخال تصنيف الحلقة");
+                    result1=-1;
+                }
+                // If all good, will check if there's Query error on setting halaqa.
+                if(result1==5) {
+                    if (result == -1) {
+                        Toast.makeText(halaqatFreshStart.this, " خطأ في الادخال ", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(halaqatFreshStart.this, " تمت اضافة الحلقة بنجاح ", Toast.LENGTH_SHORT).show();
+                        startActivity(toMainApp);
+                    }
                 }
             }
         });

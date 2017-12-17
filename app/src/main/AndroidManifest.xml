@@ -76,7 +76,8 @@
             android:name=".updateParentInfo"
             android:label="@string/updateParentInfo" />
         <activity android:name=".addTeacherFreshStart" />
-        <activity android:name=".halaqatFreshStart"></activity>
+        <activity android:name=".halaqatFreshStart" />
+        <activity android:name=".welcomeActivity"></activity>
     </application>
 
 </manifest>
