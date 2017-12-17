@@ -106,20 +106,16 @@
                     app:layout_constraintTop_toBottomOf="@+id/spinnerHalaqatList"
                     app:layout_constraintVertical_bias="0.0" />
 
-                <EditText
-                    android:id="@+id/insertٍParentSSN"
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
-                    android:hint="@string/parentSSN"
-                    android:inputType="numberDecimal"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/insertParentName"
-                    app:layout_constraintVertical_bias="0.0" />
+                    android:text="@string/insertparentSSN"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/parentSSN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
                 <Button
                     android:id="@+id/btnInsertNewStudent"

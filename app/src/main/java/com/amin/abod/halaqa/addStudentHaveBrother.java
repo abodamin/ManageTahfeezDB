@@ -18,7 +18,8 @@ import java.util.List;
 public class addStudentHaveBrother extends AppCompatActivity {
 MyDataBase myDataBase = new MyDataBase(this);
 
-    Spinner halaqaSpinner;
+    Spinner halaqaSpinner ;
+    Spinner parentSSN;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,12 +30,15 @@ MyDataBase myDataBase = new MyDataBase(this);
 
         loadSpinnerData();
 
+        parentSSN = (Spinner) findViewById(R.id.parentSSN);
+
+        loadParentSpinnerData();
 
         final EditText studentName = (EditText) findViewById(R.id.insertStudentName);
         final EditText studentSSN = (EditText) findViewById(R.id.insertٍStudentSSN);
         final EditText studentMobile = (EditText) findViewById(R.id.insertٍStudentMobile);
         final EditText studentStartHifz = (EditText) findViewById(R.id.insertStartHifz);
-        final EditText  parentSSN = (EditText) findViewById(R.id.insertٍParentSSN);
+
         //final EditText  sHalaqaName = (EditText) findViewById(R.id.insertHalaqaName); replaced by spinner
 
         Button btnAddStudent = (Button) findViewById(R.id.btnInsertNewStudent);
@@ -51,7 +55,7 @@ MyDataBase myDataBase = new MyDataBase(this);
                 String sHifz = studentStartHifz.getText().toString().trim();
                 String sHalaqa = halaqaSpinner.getSelectedItem().toString();
                 String sMobile = studentMobile.getText().toString().trim();
-                String paSSNText = parentSSN.getText().toString().trim();
+                String paSSNText = parentSSN.getSelectedItem().toString();//*
                 if (! TextUtils.isEmpty(sSSNText)) sSSN = Integer.parseInt(sSSNText);
                 if (! TextUtils.isEmpty(paSSNText)) paSSN = Integer.parseInt(paSSNText);
                 long result=0,result1=0;
@@ -81,8 +85,8 @@ MyDataBase myDataBase = new MyDataBase(this);
                     result1=-1;
                 }
                 else if(TextUtils.isEmpty(paSSNText)){
-                    parentSSN.setError("لايمكن لهذه الخانة ان تكون فارغة");
-                    Toast.makeText(addStudentHaveBrother.this, " يجب إدخال رقم هوية المعلم ", Toast.LENGTH_LONG).show();
+                    //parentSSN.setError("لايمكن لهذه الخانة ان تكون فارغة");
+                    Toast.makeText(addStudentHaveBrother.this, " يجب إدخال رقم هوية ولي الأمر ", Toast.LENGTH_LONG).show();
                     result1=-1;
                 }
                 // If all good, will check if there's Query error on setting halaqa.
@@ -118,6 +122,25 @@ MyDataBase myDataBase = new MyDataBase(this);
 
         // attaching data adapter to spinner
         halaqaSpinner.setAdapter(dataAdapter);
+    }
+
+    private void loadParentSpinnerData() {
+        // database handler
+        MyDataBase db = new MyDataBase(getApplicationContext());
+
+        // Spinner Drop down elements
+        List<String> lables = db.getAllLabels(2);
+
+        // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, lables);
+
+        // Drop down layout style - list view with radio button
+        dataAdapter
+                .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // attaching data adapter to spinner
+        parentSSN.setAdapter(dataAdapter);
     }
 
     public void refreshing (){

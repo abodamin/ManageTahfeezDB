@@ -46,8 +46,8 @@ MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor t
                 int pSSN=0;
                 long result1 = 0,result3=0,result2=0,result4=0;
                 String pName = parentName.getText().toString().trim();
-                String pSSNText = parentSSN.getText().toString().trim();//taking integers must be like this as i know :)
-                if (! TextUtils.isEmpty(pSSNText)) pSSN = Integer.parseInt(pSSNText);
+                String pSSNText = parentSSN.getText().toString().trim();
+                if (! TextUtils.isEmpty(pSSNText)) pSSN = Integer.parseInt(pSSNText); //because we cant check if empty of integers
                 String pMobile = parentMobile.getText().toString().trim();
                 int sSSN = 0;
                 String sSSNText = studentSSN.getText().toString().trim();
@@ -58,6 +58,7 @@ MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor t
                 String sMobile = studentMobile.getText().toString().trim();
 
                 /* check student fields first */
+                // every field is -1 if it's empty
                 if(! TextUtils.isEmpty(sName) && ! TextUtils.isEmpty(sHifz) && ! TextUtils.isEmpty(sSSNText) && ! TextUtils.isEmpty(sHalaqa) && ! TextUtils.isEmpty(sMobile) && result4 == 0) {
                     result4 = 5;
                 }
