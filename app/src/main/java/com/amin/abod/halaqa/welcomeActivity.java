@@ -117,7 +117,7 @@ public class welcomeActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(welcomeActivity.this, mainPage.class));
+        startActivity(new Intent(welcomeActivity.this, addTeacherFreshStart.class));
         finish();
     }
 

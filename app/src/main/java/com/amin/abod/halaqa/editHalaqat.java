@@ -3,6 +3,7 @@ package com.amin.abod.halaqa;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -69,6 +70,7 @@ public class editHalaqat extends AppCompatActivity {
                 }else if(newHalaqaName.getVisibility() ==  View.VISIBLE){
                     String nHname = newHalaqaName.getText().toString().trim();
                     String oldHname = spinnerHalaqaToUpdate.getSelectedItem().toString().trim();
+                    if(!TextUtils.isEmpty(nHname)){
                     boolean r = myDataBase.updateHalaqaNameInfo(nHname ,oldHname);
                     if(r){
                         Toast.makeText(editHalaqat.this, "تم تعديل الحقلة بنجاح", Toast.LENGTH_SHORT).show();
@@ -76,7 +78,10 @@ public class editHalaqat extends AppCompatActivity {
                     }else{
                         Toast.makeText(editHalaqat.this, "هناك خطأ !", Toast.LENGTH_SHORT).show();
                     }
-                }
+                }else{
+                        newHalaqaName.setError("لايمكن لهذه الخانة ان تكون فارغة");
+                        return;
+                    }}
             }
         });
 

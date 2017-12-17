@@ -21,7 +21,7 @@ public class mainPage extends AppCompatActivity {
             editor.putBoolean("first", false);
             //For commit the changes, Use either editor.commit(); or  editor.apply();.
             editor.commit();
-            Intent teacher = new Intent(mainPage.this, addTeacherFreshStart.class);
+            Intent teacher = new Intent(mainPage.this, welcomeActivity.class);
             startActivity(teacher);
         }
         setContentView(R.layout.activity_main_page);
