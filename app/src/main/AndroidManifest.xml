@@ -8,12 +8,16 @@
         android:label="@string/mainPageLabel"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".mainPage">
+
+        <activity android:name=".welcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".mainPage">
         </activity>
         <activity
             android:name=".students"
@@ -77,7 +81,6 @@
             android:label="@string/updateParentInfo" />
         <activity android:name=".addTeacherFreshStart" />
         <activity android:name=".halaqatFreshStart" />
-        <activity android:name=".welcomeActivity"></activity>
     </application>
 
 </manifest>
