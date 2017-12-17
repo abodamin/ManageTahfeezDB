@@ -66,14 +66,14 @@ MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor t
                     Toast.makeText(addNewStudent.this, " يجب إدخال اسم الطالب ", Toast.LENGTH_LONG).show();
                     result4=-1;
                 }
-                else if(TextUtils.isEmpty(sMobile)){
-                    studentMobile.setError("لايمكن لهذه الخانة ان تكون فارغة");
-                    Toast.makeText(addNewStudent.this, " يجب إدخال رقم جوال الطالب ", Toast.LENGTH_LONG).show();
-                    result4=-1;
-                }
                 else if(TextUtils.isEmpty(sSSNText)){
                     studentSSN.setError("لايمكن لهذه الخانة ان تكون فارغة");
                     Toast.makeText(addNewStudent.this, " يجب إدخال رقم هوية الطالب ", Toast.LENGTH_LONG).show();
+                    result4=-1;
+                }
+                else if(TextUtils.isEmpty(sMobile)){
+                    studentMobile.setError("لايمكن لهذه الخانة ان تكون فارغة");
+                    Toast.makeText(addNewStudent.this, " يجب إدخال رقم جوال الطالب ", Toast.LENGTH_LONG).show();
                     result4=-1;
                 }
                 else if(TextUtils.isEmpty(sHifz)){
@@ -92,13 +92,14 @@ MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor t
                     parentName.setError("لايمكن لهذه الخانة ان تكون فارغة");
                     Toast.makeText(addNewStudent.this, " يجب إدخال اسم ولي الأمر ", Toast.LENGTH_LONG).show();
                     result3=-1;
-                }else if(TextUtils.isEmpty(pMobile)){
-                    parentMobile.setError("لايمكن لهذه الخانة ان تكون فارغة");
-                    Toast.makeText(addNewStudent.this, " يجب إدخال رقم جوال ولي الأمر ", Toast.LENGTH_LONG).show();
-                    result3=-1;
                 }else if(TextUtils.isEmpty(pSSNText)){
                     parentSSN.setError("لايمكن لهذه الخانة ان تكون فارغة");
                     Toast.makeText(addNewStudent.this, " يجب إدخال رقم هوية ولي الأمر ", Toast.LENGTH_LONG).show();
+                    result3=-1;
+
+                }else if(TextUtils.isEmpty(pMobile)){
+                    parentMobile.setError("لايمكن لهذه الخانة ان تكون فارغة");
+                    Toast.makeText(addNewStudent.this, " يجب إدخال رقم جوال ولي الأمر ", Toast.LENGTH_LONG).show();
                     result3=-1;
                 }}
                 if(result3 == 5){
