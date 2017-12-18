@@ -106,6 +106,17 @@
                 app:layout_constraintTop_toBottomOf="@+id/spinnerHalaqatList"
                 app:layout_constraintVertical_bias="0.0" />
 
+            <RadioButton
+
+                android:id="@+id/parentExist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:layoutDirection="rtl"
+                android:text="الطالب لديه أخ"
+                android:textAlignment="textStart" /> />
+
             <EditText
                 android:id="@+id/insertParentName"
                 android:layout_width="match_parent"

@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -18,7 +19,11 @@ import java.util.List;
 public class addNewStudent extends AppCompatActivity {
 MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor takes Context
 
+    RadioButton parentExist;
     Spinner halaqaSpinner;
+    EditText parentName;
+    EditText parentMobile;
+    EditText  parentSSN;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,15 +34,21 @@ MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor t
 
         loadSpinnerData();
 
+        parentExist  = (RadioButton) findViewById(R.id.parentExist);
+
         final EditText studentName = (EditText) findViewById(R.id.insertStudentName);
         final EditText studentSSN = (EditText) findViewById(R.id.insertٍStudentSSN);
         final EditText studentMobile = (EditText) findViewById(R.id.insertٍStudentMobile);
         final EditText studentStartHifz = (EditText) findViewById(R.id.insertStartHifz);
-        final EditText parentName = (EditText) findViewById(R.id.insertParentName);
-        final EditText parentMobile = (EditText) findViewById(R.id.insertٍParentMobile);
-        final EditText  parentSSN = (EditText) findViewById(R.id.insertٍParentSSN);
+        parentName = (EditText) findViewById(R.id.insertParentName);
+        parentName.setVisibility(View.GONE);
+        parentMobile = (EditText) findViewById(R.id.insertٍParentMobile);
+        parentMobile.setVisibility(View.GONE);
+        parentSSN = (EditText) findViewById(R.id.insertٍParentSSN);
+        parentSSN.setVisibility(View.GONE);
         //final EditText  sHalaqaName = (EditText) findViewById(R.id.insertHalaqaName);
 
+        onParentExistButtonClick();
         Button btnAddStudent = (Button) findViewById(R.id.btnInsertNewStudent);
 
         btnAddStudent.setOnClickListener(new View.OnClickListener() {
@@ -120,7 +131,27 @@ MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor t
                     }
                 }
         }
-    );}
+
+    );
+    }
+    public void onParentExistButtonClick() {
+        parentExist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (parentName.getVisibility()==View.GONE && parentMobile.getVisibility()==View.GONE && parentSSN.getVisibility()==View.GONE) {
+
+                    parentName.setVisibility(View.VISIBLE);
+                    parentMobile.setVisibility(View.VISIBLE);
+                    parentSSN.setVisibility(View.VISIBLE);
+
+                } else {
+                    parentName.setVisibility(View.GONE);
+                    parentMobile.setVisibility(View.GONE);
+                    parentSSN.setVisibility(View.GONE);
+                }
+            }
+        });
+    }
 
 
 
