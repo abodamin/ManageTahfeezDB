@@ -50,6 +50,10 @@ public class deleteHalaqa extends AppCompatActivity {
 
         // Spinner Drop down elements
         List<String> lables = db.getAllLabels(4);
+        if (lables.size() == 0){
+            Toast.makeText(this,"لاتوجد حلقة مضافة",Toast.LENGTH_SHORT).show();
+            finish();
+        }
 
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,

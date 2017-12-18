@@ -1,7 +1,5 @@
 package com.amin.abod.halaqa.Module;
-/**
- * Created by abody on 12/6/2017.
- */
+
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -358,6 +356,19 @@ public class MyDataBase extends SQLiteOpenHelper{
         else{
             return true;
         }
+    }
+    public boolean checkIfTeacherConnectToHalaqa(String tSSN){
+        SQLiteDatabase db = this.getReadableDatabase();
+
+            String Query = "Select * from " + DB_Table_Halaqa + " where " + tSSN + " = HTSSN" ;
+            Cursor cursor = db.rawQuery(Query, null);
+            if(cursor.getCount() <= 0){
+                cursor.close();
+                return false;
+            }
+            cursor.close();
+            return true;
+
     }
 }
 

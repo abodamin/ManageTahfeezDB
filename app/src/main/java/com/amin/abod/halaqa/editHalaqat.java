@@ -137,7 +137,10 @@ public class editHalaqat extends AppCompatActivity {
 
         // Spinner Drop down elements
         List<String> lables = db.getAllLabels(4); // Halaqat
-
+        if (lables.size() == 0){
+            Toast.makeText(this,"لاتوجد حلقة مضافة ليتم تعديها",Toast.LENGTH_SHORT).show();
+            finish();
+        }
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, lables);
@@ -156,7 +159,10 @@ public class editHalaqat extends AppCompatActivity {
 
         // Spinner Drop down elements
         List<String> lables = db.getAllLabels(3); // Teachers
-
+        if (lables.size() == 0){
+            Toast.makeText(this,"لا يوجد معلم مربوط بحلقة",Toast.LENGTH_SHORT).show();
+            finish();
+        }
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, lables);

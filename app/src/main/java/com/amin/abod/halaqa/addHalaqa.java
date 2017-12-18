@@ -70,7 +70,10 @@ public class addHalaqa extends AppCompatActivity {
 
         // Spinner Drop down elements
         List<String> lables = db.getAllLabels(3);
-
+        if (lables.size() == 0){
+            Toast.makeText(this,"لايوجد معلم مضاف أضف معلم أولاً",Toast.LENGTH_SHORT).show();
+            finish();
+        }
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, lables);

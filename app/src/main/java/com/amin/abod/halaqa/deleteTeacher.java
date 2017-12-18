@@ -30,17 +30,20 @@ public class deleteTeacher extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String tSSN = spinnerTeacherToDelete.getSelectedItem().toString().trim();
-                boolean result = myDataBase.deleteTeacher(tSSN);
 
-                if (result){
-                    Toast.makeText(deleteTeacher.this, " تم حذف المعلم ", Toast.LENGTH_SHORT).show();
-                    refreshing();
-                } else {
-                    Toast.makeText(deleteTeacher.this, " خطأ ", Toast.LENGTH_SHORT).show();
+                    boolean result = myDataBase.deleteTeacher(tSSN);
+
+                    if (result){
+                        Toast.makeText(deleteTeacher.this, " تم حذف المعلم ", Toast.LENGTH_SHORT).show();
+                        refreshing();
+                    } else {
+                        Toast.makeText(deleteTeacher.this, " خطأ ", Toast.LENGTH_SHORT).show();
+                    }
                 }
-            }
+
         });
     }
+
 
 
     private void loadSpinnerData() {
@@ -49,6 +52,10 @@ public class deleteTeacher extends AppCompatActivity {
 
         // Spinner Drop down elements
         List<String> lables = db.getAllLabels(3);
+        if (lables.size() == 0){
+            Toast.makeText(this,"لا يوجد معلمين مضافين",Toast.LENGTH_SHORT).show();
+            finish();
+        }
 
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,

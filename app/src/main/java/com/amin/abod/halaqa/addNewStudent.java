@@ -55,6 +55,8 @@ MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor t
                 if (! TextUtils.isEmpty(sSSNText)) sSSN = Integer.parseInt(sSSNText);
                 String sHifz = studentStartHifz.getText().toString().trim();
                 String sHalaqa = halaqaSpinner.getSelectedItem().toString();
+
+
                 String sMobile = studentMobile.getText().toString().trim();
 
                 /* check student fields first */
@@ -128,14 +130,17 @@ MyDataBase myDataBase = new MyDataBase(this);   //parameter in the constructor t
 
         // Spinner Drop down elements
         List<String> lables = db.getAllLabels(4);
+        if (lables.size() == 0){
+            Toast.makeText(this,"لاتوجد حلقة مضافة يجب إضافة حلقة أولاً",Toast.LENGTH_SHORT).show();
+            finish();
+        }
 
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, lables);
 
         // Drop down layout style - list view with radio button
-        dataAdapter
-                .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         // attaching data adapter to spinner
         halaqaSpinner.setAdapter(dataAdapter);

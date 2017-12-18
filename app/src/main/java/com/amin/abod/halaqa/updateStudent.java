@@ -167,6 +167,10 @@ public class updateStudent extends AppCompatActivity {
 
         // Spinner Drop down elements
         List<String> lables = db.getAllLabels(5);
+        if (lables.size() == 0){
+            Toast.makeText(this,"لايوجد طلاب مضافين",Toast.LENGTH_SHORT).show();
+            finish();
+        }
 
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
@@ -186,6 +190,10 @@ public class updateStudent extends AppCompatActivity {
 
         // Spinner Drop down elements
         List<String> lables = db.getAllLabels(4);
+        if (lables.size() == 0){
+            Toast.makeText(this,"لاتوجد حلقة مضافة يجب إضافة حلقة أولاً",Toast.LENGTH_SHORT).show();
+            finish();
+        }
 
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,

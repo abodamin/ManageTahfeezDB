@@ -103,7 +103,10 @@ MyDataBase myDataBase = new MyDataBase(this);
 
         // Spinner Drop down elements
         List<String> lables = db.getAllLabels(3);//switch of teacher
-
+        if (lables.size() == 0){
+            Toast.makeText(this,"لا يوجد معلمين مضافين",Toast.LENGTH_SHORT).show();
+            finish();
+        }
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, lables);
