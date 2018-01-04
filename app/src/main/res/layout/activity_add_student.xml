@@ -28,6 +28,8 @@
             android:text="@string/newStudent"
             android:textSize="24sp"
             android:textStyle="bold"
+            android:background="@drawable/rounded_button"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,6 +44,8 @@
             android:text="@string/haveBrother"
             android:textSize="24sp"
             android:textStyle="bold"
+            android:background="@drawable/rounded_button"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
