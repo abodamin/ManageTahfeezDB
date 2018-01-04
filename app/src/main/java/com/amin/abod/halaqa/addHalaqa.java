@@ -24,7 +24,7 @@ public class addHalaqa extends AppCompatActivity {
         setContentView(R.layout.activity_add_halaqa);
 
         final EditText halaqaName = (EditText) findViewById(R.id.insertHalaqaName);
-        final EditText halaqaCategory = (EditText) findViewById(R.id.insertHalaqaCategory);
+        final EditText halaqaCategory = (EditText) findViewById(R.id.insertHalaqaCategory);//*
 
         spinnerTeacher = (Spinner) findViewById(R.id.spinnerChooseTeacher);
         loadSpinnerData();
@@ -36,7 +36,7 @@ public class addHalaqa extends AppCompatActivity {
             public void onClick(View v) {
                 int hTeacherSSN = Integer.parseInt(spinnerTeacher.getSelectedItem().toString());
                 String hName = halaqaName.getText().toString().trim();
-                String hCategory = halaqaCategory.getText().toString().trim();
+                String hCategory = halaqaCategory.getText().toString().trim();//*
                 long result=0,result1=0;
 
                 if(! TextUtils.isEmpty(hName) && ! TextUtils.isEmpty(hCategory) && result1==0){
@@ -48,7 +48,7 @@ public class addHalaqa extends AppCompatActivity {
                     result1=-1;
                 }
                 else if(TextUtils.isEmpty(hCategory)){
-                    halaqaCategory.setError("يجب إدخال تصنيف الحلقة");
+                    halaqaCategory.setError("يجب إدخال تصنيف الحلقة");//*
                     result1=-1;
                 }
                 // If all good, will check if there's Query error on setting halaqa.

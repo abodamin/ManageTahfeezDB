@@ -145,7 +145,7 @@ public class MyDataBase extends SQLiteOpenHelper{
     public List<String> getAllLabels(int x){
         List<String> labels = new ArrayList<String>();
         SQLiteDatabase db = this.getReadableDatabase();
-        String selectQuery="";
+        String selectQuery=" ";
         Cursor cursor;
         // Select All Query
         switch(x) {
@@ -164,17 +164,20 @@ public class MyDataBase extends SQLiteOpenHelper{
             case 5:
                 selectQuery = "SELECT SSN FROM " + DB_Table_Student;
                 break;
+
+
+
+
         }
 
-
         cursor = db.rawQuery(selectQuery, null);
-
 
 
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
                 labels.add(cursor.getString(0));
+
             } while (cursor.moveToNext());
         }
 
@@ -311,7 +314,7 @@ public class MyDataBase extends SQLiteOpenHelper{
 
         db.execSQL("create table "+ DB_Table_Halaqa +" " +   //Halaqa
                 "( Hname TEXT DEFAULT 'لا يوجد حلقة'" +   //Halaqa name
-                ",category TEXT DEFAULT ''" +  //categoru of Halaqa
+                ",category TEXT DEFAULT ''" +  //category of Halaqa
                 ", HTSSN INTEGER DEFAULT 1" +  //Halaqa Teacher ID
                 ",FOREIGN KEY(HTSSN) REFERENCES "+DB_Table_Teacher+"(TSSN) ON DELETE SET DEFAULT " +
                 ", PRIMARY KEY(Hname) )");
