@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.amin.abod.halaqa.Module.MyDataBase;
 
@@ -26,6 +27,10 @@ public class viewStudents extends AppCompatActivity {
     private void showData() {
         ArrayList<String> list = myDataBase.getAllStudents();
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,list);
+        if (arrayAdapter.isEmpty() == true){
+            Toast.makeText(this,"لايوجد طلاب لعرضهم",Toast.LENGTH_LONG).show();
+            finish();
+        }
         listView.setAdapter(arrayAdapter);
 
     }

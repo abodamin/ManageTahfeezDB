@@ -17,7 +17,7 @@ import java.util.List;
 
 public class addHalaqa extends AppCompatActivity {
     MyDataBase myDataBase = new MyDataBase(this);
-    Spinner spinnerTeacher;
+    Spinner spinnerTeacher, spinnerHalaqaCategory;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +25,8 @@ public class addHalaqa extends AppCompatActivity {
 
         final EditText halaqaName = (EditText) findViewById(R.id.insertHalaqaName);
         final EditText halaqaCategory = (EditText) findViewById(R.id.insertHalaqaCategory);//*
-
+        spinnerHalaqaCategory = (Spinner) findViewById(R.id.spinnerHalaqaCategory);
+        loadSpinnerHalaqaData();
         spinnerTeacher = (Spinner) findViewById(R.id.spinnerChooseTeacher);
         loadSpinnerData();
 
@@ -85,6 +86,29 @@ public class addHalaqa extends AppCompatActivity {
         // attaching data adapter to spinner
         spinnerTeacher.setAdapter(dataAdapter);
     }
+
+    private void loadSpinnerHalaqaData() {
+        // database handler
+        MyDataBase db = new MyDataBase(getApplicationContext());
+
+        // Spinner Drop down elements
+        List<String> lables = db.getAllCategory();
+        if (lables.size() == 0){
+            Toast.makeText(this,"لايوجد معلم مضاف أضف معلم أولاً",Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, lables);
+
+        // Drop down layout style - list view with radio button
+        dataAdapter
+                .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // attaching data adapter to spinner
+        spinnerHalaqaCategory.setAdapter(dataAdapter);
+    }
+
     public void refreshing (){
         Intent intent = getIntent();
         finish();

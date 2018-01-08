@@ -4,13 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.amin.abod.halaqa.viewTeachers">
+    tools:context="com.amin.abod.halaqa.viewTeachers"
+    android:background="@drawable/masjid634537">
+
 
     <ListView
         android:id="@+id/listViewData"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/costumized_list3"
+        android:clickable="false"
+        android:dividerHeight="@dimen/dots_height"
+        android:headerDividersEnabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

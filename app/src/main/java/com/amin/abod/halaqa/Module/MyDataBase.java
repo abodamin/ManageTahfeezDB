@@ -165,9 +165,6 @@ public class MyDataBase extends SQLiteOpenHelper{
                 selectQuery = "SELECT SSN FROM " + DB_Table_Student;
                 break;
 
-
-
-
         }
 
         cursor = db.rawQuery(selectQuery, null);
@@ -371,6 +368,17 @@ public class MyDataBase extends SQLiteOpenHelper{
             }
             cursor.close();
             return true;
+
+    }
+
+    public List<String> getAllCategory() {
+        List<String> labels2 = new ArrayList<String>();
+        labels2.add(" ابتدائي ");
+        labels2.add(" متوسط ");
+        labels2.add(" ثانوي ");
+        labels2.add(" جامعي ");
+        labels2.add(" متنوع ");
+        return labels2;
 
     }
 }

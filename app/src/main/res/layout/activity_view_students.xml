@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.amin.abod.halaqa.updateStudent">
+    tools:context="com.amin.abod.halaqa.updateStudent"
+    android:background="@drawable/masjid634537">
 
     <ListView
         android:id="@+id/listViewData"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/costumized_list3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

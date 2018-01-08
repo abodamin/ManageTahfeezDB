@@ -98,5 +98,8 @@
     <string name="EditHalaqaTeacher">تعديل معلم الحلقة</string>
     <string name="EditHalaqaTecher">ادخل اسم معلم الحلقة</string>
     <string name="EditHalaName">ادخل اسم الحلقة</string>
+    <string name="Halaqa_category">TextView</string>
+    <string name="hC">تصنيف الحلقة</string>
+    <string name="chooseTezcherOfHalaqa">معلم الحلقة</string>
 
 </resources>
