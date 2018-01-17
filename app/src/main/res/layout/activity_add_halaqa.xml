@@ -22,10 +22,11 @@
 
         <EditText
             android:id="@+id/insertHalaqaName"
-            android:layout_width="351dp"
-            android:layout_height="28dp"
+            android:layout_width="0dp"
+            android:layout_height="33dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:background="@color/dot_light_screen2"
             android:breakStrategy="balanced"
             android:cursorVisible="false"
@@ -36,84 +37,89 @@
             android:textAlignment="center"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/btnInsertHalaqa"
-            android:layout_width="137dp"
+            android:layout_width="129dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/rounded_button"
             android:text="@string/addHalaqa"
             android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="bold"
+            android:background="@drawable/rounded_button"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerChooseTeacher"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/insertHalaqaName"
+            app:layout_constraintVertical_bias="0.94" />
 
         <TextView
             android:id="@+id/textViewAddTeacher"
-            android:layout_width="118dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="241dp"
-            android:layout_marginTop="43dp"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="28dp"
             android:text="@string/chooseTezcherOfHalaqa"
             android:textAlignment="center"
             android:textColor="@android:color/background_light"
             android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnerChooseTeacher"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            app:layout_constraintTop_toTopOf="@+id/spinnerChooseTeacher"
+            tools:text="معلم الحلقة" />
 
         <Spinner
             android:id="@+id/spinnerChooseTeacher"
-            android:layout_width="212dp"
-            android:layout_height="31dp"
-            android:layout_marginBottom="311dp"
-            android:layout_marginEnd="18dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="36dp"
+            android:layout_width="210dp"
+            android:layout_height="33dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:background="@color/dot_light_screen2"
-            app:layout_constraintBottom_toTopOf="@+id/btnInsertHalaqa"
+            android:spinnerMode="dialog"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textViewAddTeacher"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerHalaqaCategory" />
+            app:layout_constraintTop_toBottomOf="@+id/spinnerHalaqaCategory"
+            app:layout_constraintVertical_bias="0.035" />
 
         <Spinner
             android:id="@+id/spinnerHalaqaCategory"
-            android:layout_width="209dp"
-            android:layout_height="30dp"
-            android:layout_marginBottom="36dp"
+            android:layout_width="210dp"
+            android:layout_height="33dp"
+            android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:background="@color/dot_light_screen2"
-            app:layout_constraintBottom_toTopOf="@+id/textViewAddTeacher"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView8"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insertHalaqaName"
+            app:layout_constraintVertical_bias="0.035" />
 
         <TextView
             android:id="@+id/textView8"
-            android:layout_width="96dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="29dp"
+            android:layout_marginTop="8dp"
             android:text="@string/Halaqa_category"
-            android:textAlignment="viewEnd"
+            android:textAlignment="center"
             android:textColor="@android:color/background_light"
             android:textSize="18sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnerHalaqaCategory"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/spinnerHalaqaCategory"
-            app:layout_constraintTop_toBottomOf="@+id/insertHalaqaName"
-            tools:text="@string/hC" />
+            app:layout_constraintTop_toTopOf="@+id/spinnerHalaqaCategory"
+            tools:text="تصنيف الحلقة " />
 
     </android.support.constraint.ConstraintLayout>
 </RelativeLayout>
